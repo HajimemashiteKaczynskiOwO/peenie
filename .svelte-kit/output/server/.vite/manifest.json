@@ -67,7 +67,7 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.D5OugHbG.css"
+      "_app/immutable/assets/_layout.24LPJ8-q.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -80,6 +80,15 @@
     ],
     "css": [
       "_app/immutable/assets/_page.BoQhueyA.css"
+    ]
+  },
+  "src/routes/photoapp/+page.svelte": {
+    "file": "entries/pages/photoapp/_page.svelte.js",
+    "name": "entries/pages/photoapp/_page.svelte",
+    "src": "src/routes/photoapp/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
     ]
   }
 }
