@@ -6,6 +6,7 @@
 		<h1> <b>George Flowberry</b> </h1>
 <h2>Since my time in Tilted Towres.. I have figured out how to successfully fabricate a 20 dollar vbuck card...!</h2>
 <h3>This is how i Did it:</h3>
+<img src="src/images/fact.png" alt="teeee" width="500" height="600"> 
 <!--Under denna kommer vi lägga till fler element-->
 
 <p id="inspo">
