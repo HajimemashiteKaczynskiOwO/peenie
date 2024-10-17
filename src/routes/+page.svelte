@@ -3,9 +3,9 @@
 <main>
 	<div>
 
-<h1> Namn efternamn </h1>
-<h2>Här har jag samlat min uppgifter jag gjort i samband med webbutveckling i årskurs 2 på Maja Beskowgymnasiet!</h2>
-<h3>Inspirerade citat för min webbutvecklingsresa:</h3>
+<h1> squeazy peasy </h1>
+<h2>super skiidi dibidi!</h2>
+<h3>inspirerade mig för mitt memorial till george flowberry:</h3>
 <!--Under denna kommer vi lägga till fler element-->
 
 	</div>
