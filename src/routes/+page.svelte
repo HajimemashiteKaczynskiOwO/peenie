@@ -6,6 +6,7 @@
 <h1> squeazy peasy </h1>
 <h2>super skiidi dibidi!</h2>
 <h3>inspirerade mig för mitt memorial till george flowberry:</h3>
+<h4>skibidibidibidbidbidbidbidbdibdi</h4>
 <!--Under denna kommer vi lägga till fler element-->
 
 	</div>
