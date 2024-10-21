@@ -93,7 +93,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.BoQhueyA.css"
+      "_app/immutable/assets/_page.BriMyoNk.css"
     ]
   },
   "src/routes/about/+page.svelte": {
@@ -103,6 +103,9 @@
     "isEntry": true,
     "imports": [
       "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BlNNNnfB.css"
     ]
   },
   "src/routes/maf/+page.svelte": {
@@ -123,7 +126,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.B6lfw-Ec.css"
+      "_app/immutable/assets/_page.Den6r6IN.css"
     ]
   }
 }
