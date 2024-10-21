@@ -5,7 +5,7 @@
 
 		<h1> <strong>George Flowberry</strong> </h1>
 <h2>Since my time in Tilted Towers.. I have figured out how to successfully fabricate a 20 dollar vbuck card...!</h2>
-<h3>This is how i Did it, follow my guide at this link: </h3><p style="background-color:orange">
+<h3>This is how i Did it, follow my guide at this link: </h3><p>
 <a href="/photoapp"><b>The Wondrous and Amazing Photo App</b></a> </p>
 <!--Under denna kommer vi lägga till fler element-->
 
@@ -13,7 +13,7 @@
     "We need to build a reinforced metal wall." - <strong>Donald Pump</strong>, The 45Th Victory Royale winner in Tilted Towers.
 </p>
 
-<p style="background-color:orange">
+<p>
     "I Actually came here just to pick up a Slurpfish." - <span>EatDatSlurpfish445, Pedophile.</span>.
 </p>
 .
