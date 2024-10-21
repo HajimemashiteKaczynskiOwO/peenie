@@ -4,16 +4,16 @@
 	<div>
 
 		<h1> <strong>George Flowberry</strong> </h1>
-<h2>Since my time in Tilted Towres.. I have figured out how to successfully fabricate a 20 dollar vbuck card...!</h2>
-<h3>This is how i Did it:</h3>
-<img src="src/images/fact.png" alt="teeee"> 
+<h2>Since my time in Tilted Towers.. I have figured out how to successfully fabricate a 20 dollar vbuck card...!</h2>
+<h3>This is how i Did it, follow my guide at </h3><p style="background-color:orange">
+<a href="/photoapp"><b>The Wondrous and Amazing Photo App</b></a> </p>
 <!--Under denna kommer vi lägga till fler element-->
 
 <p id="inspo">
     "We need to build a reinforced metal wall." - <strong>Donald Pump</strong>, The 45Th Victory Royale winner in Tilted Towers.
 </p>
 
-<p style="background-color:pink">
+<p style="background-color:orange">
     "I Actually came here just to pick up a Slurpfish." - <span>EatDatSlurpfish445, Pedophile.</span>.
 </p>
 .

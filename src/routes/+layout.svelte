@@ -1,6 +1,14 @@
+<nav>
+	<a href="{base}/"><b>Beautiful House</b></a>
+	<a href="/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
+	<a href="{base}/about">About</a>
+	<a href="/maf">  </a>
+	
+
+</nav>
 <script>
 	import '../app.postcss';
-
+	import { base } from '$app/paths';
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
 	import 'highlight.js/styles/github-dark.css';

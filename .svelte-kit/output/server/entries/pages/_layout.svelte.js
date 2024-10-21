@@ -1,4 +1,5 @@
 import { g as get_store_value, c as create_ssr_component } from "../../chunks/ssr.js";
+import { b as base } from "../../chunks/paths.js";
 import hljs from "highlight.js/lib/core";
 import { w as writable, r as readable } from "../../chunks/index.js";
 import xml from "highlight.js/lib/languages/xml";
@@ -6,6 +7,7 @@ import css from "highlight.js/lib/languages/css";
 import javascript from "highlight.js/lib/languages/javascript";
 import typescript from "highlight.js/lib/languages/typescript";
 import { computePosition, autoUpdate, flip, shift, offset, arrow } from "@floating-ui/dom";
+import { e as escape } from "../../chunks/escape.js";
 const storeHighlightJs = writable(void 0);
 const storePopup = writable(void 0);
 const stores = {};
@@ -49,7 +51,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     offset,
     arrow
   });
-  return `${slots.default ? slots.default({}) : ``}`;
+  return `<nav data-svelte-h="svelte-1ay6suu"><a href="${escape(base, true) + "/"}"><b>Beautiful House</b></a> <a href="/photoapp"><b>The Wondrous and Amazing Photo App</b></a> <a href="${escape(base, true) + "/about"}">About</a> <a href="/maf"></a></nav>  ${slots.default ? slots.default({}) : ``}`;
 });
 export {
   Layout as default

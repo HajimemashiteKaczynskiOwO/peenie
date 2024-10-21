@@ -1,18 +1,5 @@
 import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./ssr.js";
-let base = "";
-let assets = base;
-const initial = { base, assets };
-function override(paths) {
-  base = paths.base;
-  assets = paths.assets;
-}
-function reset() {
-  base = initial.base;
-  assets = initial.assets;
-}
-function set_assets(path) {
-  assets = initial.assets = path;
-}
+import "./paths.js";
 let public_env = {};
 let safe_public_env = {};
 function set_private_env(environment) {
@@ -117,7 +104,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en" class="dark">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover" data-theme="skeleton">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>\n",
+    app: ({ head, body, assets, nonce, env }) => '<!DOCTYPE html>\n<html lang="en" class="dark">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets + '/favicon.png" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover" data-theme="skeleton">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>\n",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -189,28 +176,23 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "5xszbq"
+  version_hash: "1gn9e9n"
 };
 async function get_hooks() {
   return {};
 }
 export {
-  assets as a,
-  base as b,
-  read_implementation as c,
-  options as d,
-  set_private_env as e,
-  prerendering as f,
-  set_public_env as g,
-  get_hooks as h,
-  set_safe_public_env as i,
-  set_read_implementation as j,
-  set_assets as k,
-  set_building as l,
-  set_manifest as m,
-  set_prerendering as n,
-  override as o,
+  set_private_env as a,
+  prerendering as b,
+  set_public_env as c,
+  set_safe_public_env as d,
+  set_read_implementation as e,
+  set_building as f,
+  get_hooks as g,
+  set_manifest as h,
+  set_prerendering as i,
+  options as o,
   public_env as p,
-  reset as r,
+  read_implementation as r,
   safe_public_env as s
 };
