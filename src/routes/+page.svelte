@@ -42,9 +42,7 @@ h1{
 h2{
 	color:rgb(0, 241, 245);
 }
-h3{
-	color:brown;
-}
+
 	div{
 /*Styling för att centrera texten i behållaren*/
 margin: auto;
