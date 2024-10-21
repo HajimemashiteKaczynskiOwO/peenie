@@ -1,9 +1,9 @@
-<h1>THE AWESOME PHOTO APP!!!!!!!!!!!!!</h1>
+<h1>c ar!!!!!!!!!!!!!</h1>
 <div class="photos">
     <img src="images/parlor.jpg" alt="teeee" height="1000" width="1000"> 
 </div>
 <h2>oo oyes!!!</h2>
-<h3>funny</h3>
+<h3>y</h3>
 <style>
     h1{
     color:rgb(225, 18, 18)

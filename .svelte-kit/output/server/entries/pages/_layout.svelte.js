@@ -51,7 +51,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     offset,
     arrow
   });
-  return `<nav data-svelte-h="svelte-tgwt5d"><a href="${escape(base, true) + "/"}"><b>Beautiful House</b></a> <a href="${escape(base, true) + "/photoapp"}"><b>The Wondrous and Amazing Photo App</b></a> <a href="${escape(base, true) + "/about"}">About</a> <a href="/maf"></a></nav>  ${slots.default ? slots.default({}) : ``}`;
+  return `<nav data-svelte-h="svelte-8d7v09"><a href="${escape(base, true) + "/"}"><b>Beautiful House</b></a> <a href="${escape(base, true) + "/photoapp"}"><b>The Wondrous and Amazing Photo App</b></a> <a href="${escape(base, true) + "/about"}">About</a> <a href="${escape(base, true) + "/maf"}">Illustrious</a></nav>  ${slots.default ? slots.default({}) : ``}`;
 });
 export {
   Layout as default
