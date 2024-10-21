@@ -5,8 +5,6 @@
 
 		<h1> <strong>George Flowberry</strong> </h1>
 <h2>Since my time in Tilted Towers.. I have figured out how to successfully fabricate a 20 dollar vbuck card...!</h2>
-<h3>This is how i Did it, follow my guide at this link: </h3><p>
-<a href="/photoapp"><b>The Wondrous and Amazing Photo App</b></a> </p>
 <!--Under denna kommer vi lägga till fler element-->
 
 <p id="inspo">
