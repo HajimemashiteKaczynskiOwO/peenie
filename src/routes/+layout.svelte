@@ -1,6 +1,6 @@
 <nav>
 	<a href="{base}/"><b>Beautiful House</b></a>
-	<a href="/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
+	<a href="{base}/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
 	<a href="{base}/about">About</a>
 	<a href="/maf">  </a>
 	

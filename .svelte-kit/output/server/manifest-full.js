@@ -10,7 +10,7 @@ return {
 	assets: new Set([".nojekyll","favicon.png","images/fact.png","images/gem.png","images/parlor.jpg"]),
 	mimeTypes: {".png":"image/png",".jpg":"image/jpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.C9samXn6.js","app":"_app/immutable/entry/app.wjN1tPHW.js","imports":["_app/immutable/entry/start.C9samXn6.js","_app/immutable/chunks/entry.CalJSzHV.js","_app/immutable/chunks/scheduler.DZs670Vv.js","_app/immutable/chunks/paths.BcLaRVmY.js","_app/immutable/entry/app.wjN1tPHW.js","_app/immutable/chunks/scheduler.DZs670Vv.js","_app/immutable/chunks/index.DBd_pBat.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.NeaiRmH4.js","app":"_app/immutable/entry/app.BRGD0VFd.js","imports":["_app/immutable/entry/start.NeaiRmH4.js","_app/immutable/chunks/entry.DTl9kcWj.js","_app/immutable/chunks/scheduler.DZs670Vv.js","_app/immutable/chunks/paths.D7XwHLRx.js","_app/immutable/entry/app.BRGD0VFd.js","_app/immutable/chunks/scheduler.DZs670Vv.js","_app/immutable/chunks/index.DBd_pBat.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
