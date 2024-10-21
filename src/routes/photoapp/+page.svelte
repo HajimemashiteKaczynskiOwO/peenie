@@ -2,10 +2,10 @@
 <main>
 <div class="photos">
     <div class="image-wrapper">
-        <img src="static/images/fact.png" alt="teeee" width="500" height="300">
+        <img src="images/fact.png" alt="teeee" width="500" height="300">
     </div>
     <div class="image-wrapper">
-        <img src="static/images/gem.png" alt="teeee" width="500" height="300">
+        <img src="images/gem.png" alt="teeee" width="500" height="300">
     </div>
     <div class="image-wrapper">
         <img src="https://miro.medium.com/v2/resize:fit:1400/0*YeaUsQyhXSL1TCTH.png" alt="nug" width="500" height="300">
