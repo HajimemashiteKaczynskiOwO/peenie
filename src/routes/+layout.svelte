@@ -2,7 +2,7 @@
 	<a href="{base}/"><b>Beautiful House</b></a>
 	<a href="{base}/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
 	<a href="{base}/about">About</a>
-	<a href="{base}/maf">Illustrious</a>
+	<a href="https://soyjak.party/caca/"> </a>
 	
 
 </nav>
@@ -29,5 +29,15 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
+<style>
+
+:global(body), :global(html){
+margin: 0%;
+padding: 0%;
+height: 100vh;
+width: 100vw;
+}    
+
+</style>
 
 <slot />
