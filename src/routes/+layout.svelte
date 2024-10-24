@@ -1,8 +1,11 @@
 <nav>
-	<a href="{base}/"><b>Beautiful House</b></a>
-	<a href="{base}/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
-	<a href="{base}/about">About</a>
-	<a href="https://soyjak.party/caca/"> </a>
+	<div class="links">
+		<a href="{base}/"><b>Beautiful House</b></a>
+		<a href="{base}/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
+		<a href="{base}/about"><b>About</b></a>
+		<a href="{base}/register"><b>Register</b></a>
+		<a href="{base}/login"><b>Login</b></a>
+	</div>
 	
 
 </nav>
@@ -30,6 +33,18 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 <style>
+.links {
+display:flex;
+align-items: center;
+justify-content: space-evenly;
+}
+a{
+	padding:10px;
+	padding-top:10px;
+
+	margin-right: 10px;
+	margin-left:10px;
+}
 
 :global(body), :global(html){
 margin: 0%;
@@ -37,7 +52,6 @@ padding: 0%;
 height: 100vh;
 width: 100vw;
 }    
-
 </style>
 
 <slot />

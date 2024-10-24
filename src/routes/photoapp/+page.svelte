@@ -1,42 +1,52 @@
-<h1>the AWESOME PHOTO APPP!!!!!!!!!!!!!!!!!!!1</h1>
 <main>
 <div class="photos">
-    <div class="image-wrapper">
-        <img src="images/fact.png" alt="teeee" width="500" height="300">
-    </div>
-    <div class="image-wrapper">
-        <img src="images/gem.png" alt="teeee" width="500" height="300">
-    </div>
-    <div class="image-wrapper">
-        <img src="images/parlor.jpg" alt="nug" width="500" height="300">
-    </div>
+    <div class="image-wrapper"><img src="images/fact.png" alt="teeee" ></div>
+    <div class="image-wrapper"><img src="images/gem.png" alt="teeee"></div>
+    <div class="image-wrapper"><img src="images/parlor.jpg" alt="nug"></div>
+    <div class="image-wrapper"><img src="images/fact.png" alt="teeee"></div>
+    <div class="image-wrapper"><img src="images/gem.png" alt="teeee"></div>
+    <div class="image-wrapper"><img src="images/parlor.jpg" alt="nug"></div>
+    <div class="image-wrapper"><img src="images/fact.png" alt="teeee"></div>
+    <div class="image-wrapper"><img src="images/gem.png" alt="teeee"></div>
+    <div class="image-wrapper"><img src="images/parlor.jpg" alt="nug"></div>
+    <div class="image-wrapper"><img src="images/fact.png" alt="teeee"></div>
+    <div class="image-wrapper"><img src="images/gem.png" alt="teeee"></div>
+    <div class="image-wrapper"><img src="images/parlor.jpg" alt="nug"></div>
 </div>
 </main>
 <style>
     .photos {
         display:flex;
-        width:60vw;
+        width:100vw;
         align-items:center;
-        justify-content:space-between;
+        justify-content:center;
         flex-wrap:wrap;
-        
-        
+        background-color:gainsboro;
+        padding-bottom: 1920px;
 }
-h1{
-    color:red;
-}
+    .image-wrapper {
+        transition:flex 120ms ease-in-out normal;
+        max-width: 35%;
+        order: 1;
+    }
     .image-wrapper img{
         width:100%;
+
         flex:1;
-        height:300px;
+
+        max-height: 350px;
+
         border-radius: 20px;
+
         box-shadow: 4px 8px 0px rgba(0,0,0,0.2);
+
         margin:10px;
     }
     .image-wrapper:hover{
-        flex:1.5;
+        flex-grow:2;
     }
     .image-wrapper:active{
+        transition:transform 10ms ease-in-out normal;
         transform: scale(1.2);
     }
 </style>
