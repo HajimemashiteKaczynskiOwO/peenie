@@ -7,11 +7,11 @@
 <label for="name">What is your name? ❤️:</label>
 <input type="text" id="name" >
 
-<label for="name">What is your precious E-Mail?</label>
-<input type="email" id="email" >
+<label for="email">What is your precious E-Mail?</label>
+<input type="email" id="email" bind:value={email}>
 
-<label for="name">Give me your password, all of it!</label>
-<input type="password" id="pass" >
+<label for="pass">Give me your password, all of it!</label>
+<input type="password" id="pass"bind:value={pass} >
 
 <label for="favoritecol">At last, what's your favorite color?</label>
 <select id="favoritecol" name="favoritecol">
@@ -36,7 +36,7 @@
 
 <style>
 main{
-        background-image: url("https://s3.ezgif.com/tmp/ezgif-3-be802b7d94.gif");
+        background-image: url("https://s11.gifyu.com/images/SOwIF.gif");
         background-size: cover;
         width: auto;
         height: auto;
@@ -96,8 +96,41 @@ h4{
 
 
 
-    function handleSubmit(){
-    alert("Welcome!!!")
+
+import { onMount } from 'svelte';
+onMount(() => {
+    /*Check if has more then 2 characters*/
+    if($users_store.length > 2){
+        users = JSON.parse($users_store);
+    }
+});
+let users =[];
+let name ="";
+let pass ="";
+let email ="";
+
+import {users_store} from "$lib/user";
+
+function handleSubmit(){
+    let new_user = {username: name, pass: pass, email: email, favoritecol: favoritecol};
+    let fList = users.filter(user =>  user.email == new_user.email)
+
+    console.log(new_user)
+
+    if (fList.length != 0){
+        alert("User Already Exists!")
+    } 
+    else{
+        alert("Thank you!")
+        users = [...users, new_user];
+        $users_store = JSON.stringify(users);
+    }
 }
+
+
+
+//courtesy of samir's big big brain
+
+
 
 </script>

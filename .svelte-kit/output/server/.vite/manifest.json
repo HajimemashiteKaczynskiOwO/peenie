@@ -9,10 +9,6 @@
       "_paths.js"
     ]
   },
-  "_escape.js": {
-    "file": "chunks/escape.js",
-    "name": "escape"
-  },
   "_exports.js": {
     "file": "chunks/exports.js",
     "name": "exports"
@@ -40,6 +36,13 @@
     "file": "chunks/ssr.js",
     "name": "ssr"
   },
+  "_user.js": {
+    "file": "chunks/user.js",
+    "name": "user",
+    "imports": [
+      "_index.js"
+    ]
+  },
   "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
     "name": "entries/fallbacks/error.svelte",
@@ -47,8 +50,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_exports.js",
-      "_escape.js"
+      "_exports.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
@@ -77,11 +79,10 @@
     "imports": [
       "_ssr.js",
       "_paths.js",
-      "_index.js",
-      "_escape.js"
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.D4bxcoJC.css"
+      "_app/immutable/assets/_layout.kRjuWfCo.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -108,6 +109,19 @@
       "_app/immutable/assets/_page.G8bstbU7.css"
     ]
   },
+  "src/routes/login/+page.svelte": {
+    "file": "entries/pages/login/_page.svelte.js",
+    "name": "entries/pages/login/_page.svelte",
+    "src": "src/routes/login/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_user.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.C8CF1KnY.css"
+    ]
+  },
   "src/routes/maf/+page.svelte": {
     "file": "entries/pages/maf/_page.svelte.js",
     "name": "entries/pages/maf/_page.svelte",
@@ -129,7 +143,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CN29FDhK.css"
+      "_app/immutable/assets/_page.Bwrqj4An.css"
     ]
   },
   "src/routes/register/+page.svelte": {
@@ -138,10 +152,11 @@
     "src": "src/routes/register/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_user.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.B4874LzE.css"
+      "_app/immutable/assets/_page.CGQIvstZ.css"
     ]
   }
 }

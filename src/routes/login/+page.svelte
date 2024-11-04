@@ -5,10 +5,10 @@
             <form>
                 
     <label for="name">What was your precious E-Mail again?</label>
-    <input type="email" id="email" >
+    <input type="email" id="email" bind:value={email}>
     
     <label for="name">What's your password!</label>
-    <input type="password" id="pass" >
+    <input type="password" id="pass" bind:value={pass}>
 
     </form>
     </div>
@@ -79,9 +79,40 @@
             border-radius: 20px;
             background-color: rgb(0, 255, 0);   
         }
-    </style>
-    <script>
-        function handleSubmit(){
-        alert("Welcome!!!")
+</style>
+
+<script>
+    import {users_store} from "$lib/user";
+    import { onMount } from 'svelte';
+    
+    onMount(() => {
+    /*Check if has more then 2 characters*/
+    if($users_store.length > 2){
+        users = JSON.parse($users_store);
+    }});
+
+let users = [];
+let name ="";
+let pass ="";
+let email ="";
+
+function handleSubmit(){
+    let new_user = {username: name, pass: pass, email: email};
+    console.log(new_user)
+    let fList = users.filter(user =>  user.email == new_user.email)
+
+    console.log(fList)
+
+    if (fList.length != 0 &&fList[0].pass === new_user.pass){
+        console.log("list not empty") //penis koe ojeje 
+        {
+            alert("You logged in! What a Gem!")
+        }
+    } 
+    else
+    {
+        console.log("list empty")
+        alert("User not found, or password wrong.")
     }
-    </script>
+}
+</script>
