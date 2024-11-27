@@ -106,7 +106,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.G8bstbU7.css"
+      "_app/immutable/assets/_page.0KAIXyWK.css"
     ]
   },
   "src/routes/login/+page.svelte": {
@@ -156,7 +156,19 @@
       "_user.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CGQIvstZ.css"
+      "_app/immutable/assets/_page.C5PF9A02.css"
+    ]
+  },
+  "src/routes/shoppinglist/+page.svelte": {
+    "file": "entries/pages/shoppinglist/_page.svelte.js",
+    "name": "entries/pages/shoppinglist/_page.svelte",
+    "src": "src/routes/shoppinglist/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DhvgXH__.css"
     ]
   }
 }
