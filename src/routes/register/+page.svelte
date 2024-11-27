@@ -44,7 +44,8 @@ main{
         padding-bottom:300px;
         padding-left: 600px;
         padding-right:600px;
-    }
+}
+
 
 .container{
         border: solid 5px rgb(0, 0, 0);

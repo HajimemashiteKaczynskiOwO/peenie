@@ -2,6 +2,7 @@
 	<div class="links">
 		<a href="{base}/"><b>Beautiful House</b></a>
 		<a href="{base}/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
+		<a href="{base}/shoppinglist"><b>Shopping List</b></a>
 		<a href="{base}/about"><b>About</b></a>
 		<a href="{base}/register"><b>Register</b></a>
 		<a href="{base}/login"><b>Login</b></a>
