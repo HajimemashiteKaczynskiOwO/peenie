@@ -7,6 +7,7 @@
 		<a href="{base}/register"><b>Register</b></a>
 		<a href="{base}/login"><b>Login</b></a>
 		<a href="{base}/memory"><b>Memory</b></a>
+		<a href="{base}/chat"><b>DroydAI</b></a>
 	</div>
 	
 

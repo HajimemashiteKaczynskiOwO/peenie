@@ -10,7 +10,7 @@ return {
 	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/tits.webp"]),
 	mimeTypes: {".png":"image/png",".gif":"image/gif",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.i1BfCB-L.js","app":"_app/immutable/entry/app.BNJUJUCE.js","imports":["_app/immutable/entry/start.i1BfCB-L.js","_app/immutable/chunks/entry.Dgh_sKwx.js","_app/immutable/chunks/scheduler.BtxPl-uW.js","_app/immutable/chunks/index.Cs6ubN1V.js","_app/immutable/chunks/paths.Ci6VNGXn.js","_app/immutable/entry/app.BNJUJUCE.js","_app/immutable/chunks/scheduler.BtxPl-uW.js","_app/immutable/chunks/index.DCzoMOBC.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.BW8Ko8mK.js","app":"_app/immutable/entry/app.QDCCVnGr.js","imports":["_app/immutable/entry/start.BW8Ko8mK.js","_app/immutable/chunks/entry.C6Ot7wPm.js","_app/immutable/chunks/scheduler.BtxPl-uW.js","_app/immutable/chunks/index.Cs6ubN1V.js","_app/immutable/chunks/paths.Bvptkdrb.js","_app/immutable/entry/app.QDCCVnGr.js","_app/immutable/chunks/scheduler.BtxPl-uW.js","_app/immutable/chunks/index.DCzoMOBC.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
