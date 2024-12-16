@@ -6,6 +6,7 @@
 		<a href="{base}/about"><b>About</b></a>
 		<a href="{base}/register"><b>Register</b></a>
 		<a href="{base}/login"><b>Login</b></a>
+		<a href="{base}/memory"><b>Memory</b></a>
 	</div>
 	
 

@@ -119,6 +119,7 @@ function create_ssr_component(fn) {
   };
 }
 function add_attribute(name, value, boolean) {
+  if (value == null || boolean) return "";
   const assignment = `="${escape(value, true)}"`;
   return ` ${name}${assignment}`;
 }
@@ -126,11 +127,11 @@ export {
   getContext as a,
   subscribe as b,
   create_ssr_component as c,
-  add_attribute as d,
+  each as d,
   escape as e,
-  safe_not_equal as f,
+  add_attribute as f,
   get_store_value as g,
-  each as h,
+  safe_not_equal as h,
   missing_component as m,
   noop as n,
   setContext as s,
