@@ -8,11 +8,11 @@
 <!--Under denna kommer vi lägga till fler element-->
 
 <p id="inspo">
-    "We need to build a reinforced metal wall." - <strong>Donald Pump</strong>, The 45Th Victory Royale winner in Tilted Towers.
+    "We need to build a reinforced metal wall." - <strong>Donald Pump</strong>, The 45th and 47th Victory Royale winner in Tilted Towers.
 </p>
 
 <p>
-    "I Actually came here just to pick up a Slurpfish." - <span>EatDatSlurpfish445, Pedophile.</span>.
+    "I Actually came here just to pick up a Chug Splash." - <span>EatDatFlopper445, Pedophile.</span>.
 </p>
 <iframe frameborder="0" src="https://itch.io/embed/2740255?bg_color=ffffff&amp;fg_color=000000&amp;link_color=4b92f3" width="552" height="167"><a href="https://insanitial.itch.io/spitsadventure">DJ Spits Adventure by pingplong</a></iframe><!-- Lägg till detta inom <style>-taggen -->
 

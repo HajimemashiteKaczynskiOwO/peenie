@@ -27,6 +27,9 @@ function get_store_value(store) {
   subscribe(store, (_) => value = _)();
   return value;
 }
+function null_to_empty(value) {
+  return value == null ? "" : value;
+}
 let current_component;
 function set_current_component(component) {
   current_component = component;
@@ -131,9 +134,10 @@ export {
   escape as e,
   add_attribute as f,
   get_store_value as g,
-  safe_not_equal as h,
+  noop as h,
+  safe_not_equal as i,
   missing_component as m,
-  noop as n,
+  null_to_empty as n,
   setContext as s,
   validate_component as v
 };

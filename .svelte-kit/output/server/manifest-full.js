@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/tits.webp"]),
-	mimeTypes: {".png":"image/png",".gif":"image/gif",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp"},
+	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droyda.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/tits.webp","mp3/fauci.mp3","mp3/toujours.mp3"]),
+	mimeTypes: {".png":"image/png",".gif":"image/gif",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",".mp3":"audio/mpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.B2BsTJtb.js","app":"_app/immutable/entry/app.COTyYNYG.js","imports":["_app/immutable/entry/start.B2BsTJtb.js","_app/immutable/chunks/entry.iVm5ZWb4.js","_app/immutable/chunks/scheduler.BtxPl-uW.js","_app/immutable/chunks/index.Cs6ubN1V.js","_app/immutable/chunks/paths.ByyVRTei.js","_app/immutable/entry/app.COTyYNYG.js","_app/immutable/chunks/scheduler.BtxPl-uW.js","_app/immutable/chunks/index.DCzoMOBC.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.BFRxnT2l.js","app":"_app/immutable/entry/app.Dqh9AVyc.js","imports":["_app/immutable/entry/start.BFRxnT2l.js","_app/immutable/chunks/entry.0pfXu50V.js","_app/immutable/chunks/scheduler.CxAnwkWf.js","_app/immutable/chunks/index.DIofH2Xi.js","_app/immutable/chunks/paths.B84JFsMd.js","_app/immutable/entry/app.Dqh9AVyc.js","_app/immutable/chunks/scheduler.CxAnwkWf.js","_app/immutable/chunks/index.D6RuoAkh.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

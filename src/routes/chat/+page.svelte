@@ -4,35 +4,45 @@ import { enhance } from "$app/forms";
 
 
 const eliza = new ElizaBot();
-let chat = [{ user: 'Eliza', message: eliza.getInitial() }];
-let botName ="Droyd"
+let chat = [{ user: 'Eliza', message: "My name is George Droyd. Shiiieeet, How can I assist you?" }];
+let botName ="Eliza"
+let userName ="user"
+let isWriting=false
 
 async function write(message) {
-    console.log(message)
+    if (isWriting) {return}
     chat.push({user : "user", message :message})
     chat = chat
-
-
-//Hämta HTML-elementet med id:et visible
-var element = document.getElementById("visible");
+    var element = document.getElementById("visible");
 //Ändrar elementets CSS-egenskap display till default
-element.style.display = "block"; // Visa elementet
+    element.style.display = "block"; // Visa elementet
+    isWriting= true
+
     await new Promise((r) => setTimeout(r, 1000 + Math.random() * 1000));
+    isWriting = false
+
     element.style.display = "none";
-    //TODO: Add Eliza's response to the chat
+
     let response = eliza.transform(message)
     chat.push({user : botName, message : response})
     chat=chat
 }
 
 </script>
-
+<audio controls autoplay loop=true disableremoteplayback class="audio">
+    <source src="mp3/toujours.mp3" type="audio/mp3">
+</audio>
+<div class="entirewebsite">
 <main>
     <div class="chatHead">
+        <div class="TalkyHead">
+            <img src="images/droyda.png" height="50px" width="50px">
+            <h1>George Droyd</h1>
+        </div>
         <section class="msgSection">
             {#each chat as message}
-                <article class="replies">
-                        <p class="paragraph">
+                <article class={ message.user }>
+                        <p>
                             {message.message}
                         </p>
                     </article>
@@ -48,21 +58,25 @@ element.style.display = "block"; // Visa elementet
         <form class="chatTalk" method="post" use:enhance={({ formElement, formData, action, cancel }) => { cancel(); //don't post anything to server
         const text = formData.get("text"); // what does "text" refer to?
         write(text);
-          // TODO: reset the form using _____.reset() - what do we want to reset? the element or the data?
         formElement.reset()
     }}>
-    <input type="text" name="text" class="textBox" minlength=1 maxlength="32" placeholder="Express your love...">
+    <input type="text" name="text" class="textBox" minlength=1 maxlength="64" placeholder="Express your love...">
     <input type="submit" name="submit">
         </form>
     </div>
 </main>
-
+</div>
 <style>
+    main{
+        padding-top:30px;
+    }
 .chatHead{
-    margin: auto;
+    margin:auto;
     background-color: rgb(68, 46, 179);
     width: 60vw;
     height: 70vh;
+    border-radius:10px;
+    border-color: red;
 }
 .chatTalk{
     display:flex;
@@ -71,7 +85,7 @@ element.style.display = "block"; // Visa elementet
     
 }
 .msgSection{
-    color:red;
+    color:rgb(249, 245, 245);
     height:90%;
     overflow-y: scroll;
 }
@@ -79,6 +93,17 @@ element.style.display = "block"; // Visa elementet
     margin:10px;
     padding:10px;
 }
+.user{
+    background-color:rgb(176, 148, 254);
+    display:flex;
+    justify-content: flex-end;
+    justify-self: flex-start;
+}
+.Eliza{
+    background-color: rgb(82, 9, 166);
+    padding-left:2px;
+}
+
 #visible{
     width:100px;
     height:60px;
@@ -86,21 +111,56 @@ element.style.display = "block"; // Visa elementet
     display:none;
 }
 .dot {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    animation: animationBall 1000ms ease-in-out;
+    animation-iteration-count: infinite;
+}
+.audio{
+display:none;
 }
 
+.textBox{
+
+}
+.TalkyHead h1{
+    color:white;
+    font-style: italic;
+    font-size:larger
+}
+.TalkyHead{
+    padding: auto;
+    background-color: rgb(13, 0, 255);
+    display:flex;
+    align-items: center;
+    
+    
+}
 @keyframes animationBall {
     0% { transform: scale(1); }
     50% { transform: scale(1.4); }
     100% { transform: scale(1); }
 }
-.myAnim {
-  animation-name: animationBall;
-  animation-duration: 3s; /* Längd på animationen (till exempel 3 sekunder) */
-  animation-timing-function: ease-in-out; /* Funktion som styr tidsförloppet (till exempel "ease-in-out") */
+
+.dot:nth-child(1) {
+    animation-delay: 0ms; /* Ingen fördröjning */
+}
+/* CSS-stilar för .circle med index 2 (den andra cirkeln) */
+.dot:nth-child(2) {
+    animation-delay: 333ms; /* Starta animationen efter 333 millisekunder (ms) */
+}
+/* CSS-stilar för .circle med index 3 (den tredje cirkeln) */
+.dot:nth-child(3) {
+    animation-delay: 666ms; /* Starta animationen efter 666 ms */
+}
+.entirewebsite{
+    background-image: url("https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif");
+        background-size:stretch;
+
+        width: auto;
+        height: 1500px;
 }
 </style>
