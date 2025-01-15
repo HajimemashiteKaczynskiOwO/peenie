@@ -62,7 +62,7 @@ async function write(message) {
         formElement.reset()
     }}>
     <input type="text" name="text" class="textBox" minlength=2 placeholder="Express your love...">
-    <input type="submit" name="submit" minlength=2>
+    <input type="submit" class="subby" name="submit" minlength=2>
         </form>
     </div>
 </main>
@@ -70,6 +70,9 @@ async function write(message) {
 <style>
     main{
         padding-top:30px;
+    }
+    .subby{
+        display:none;
     }
 .chatHead{
     margin:auto;
@@ -82,8 +85,8 @@ async function write(message) {
 .chatTalk{
     display:flex;
     justify-content: center;
-    margin-bottom: 100px;
-    
+    margin-top: -25px;
+    border-radius: 10px;
 }
 .msgSection{
     color:rgb(249, 245, 245);
@@ -135,6 +138,7 @@ display:none;
     color:white;
     font-style: italic;
     font-size:40px;
+    padding:10px;
 }
 .TalkyHead{
     padding: auto;
