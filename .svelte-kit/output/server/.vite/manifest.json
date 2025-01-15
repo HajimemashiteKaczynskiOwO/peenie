@@ -72,6 +72,15 @@
       "_stores.js"
     ]
   },
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/layout.svelte": {
+    "file": "entries/fallbacks/layout.svelte.js",
+    "name": "entries/fallbacks/layout.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
     "name": "index",
@@ -235,6 +244,12 @@
       "_ssr.js",
       "_stores.js"
     ]
+  },
+  "src/routes/search/[pokemon]/+layout.js": {
+    "file": "entries/pages/search/_pokemon_/_layout.js",
+    "name": "entries/pages/search/_pokemon_/_layout",
+    "src": "src/routes/search/[pokemon]/+layout.js",
+    "isEntry": true
   },
   "src/routes/search/[pokemon]/+page.js": {
     "file": "entries/pages/search/_pokemon_/_page.js",
