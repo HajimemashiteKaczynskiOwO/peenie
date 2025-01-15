@@ -15,13 +15,18 @@
 </div>
 </main>
 <style>
+    main{
+    }
     .photos {
         display:flex;
         width:100vw;
         align-items:center;
         justify-content:center;
         flex-wrap:wrap;
-        background-color:gainsboro;
+        background-image: url("https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif");
+        background-size:stretch;
+        width: auto;
+        height: 1500px;
         padding-bottom: 1920px;
 }
     .image-wrapper {

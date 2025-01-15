@@ -24,8 +24,8 @@
     
     <style>
     main{
-        background-image: url("https://soybooru.com/_images/eb6a5161b4ae21dde376321fe6910b12/16365%20-%20SoyBooru.gif");
-        background-size: cover;
+        background-image: url("https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif");
+        background-size:stretch;
         width: auto;
         height: auto;
         padding-top:250px;

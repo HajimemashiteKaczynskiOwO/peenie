@@ -25,8 +25,6 @@
 
 
 	main{
-	  /*Styling för att dela upp sidan i två delar. */
-/*Vi kommer gå igenom detta i detalj senare*/
 margin: auto;
 width: 80vw;
 height: 70vh;

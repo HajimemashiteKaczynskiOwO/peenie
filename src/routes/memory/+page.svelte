@@ -78,7 +78,7 @@
         flippedCards=[];
     }
 </script>
-
+<div class="bigAssbackground">
 <div class="Header"><h1>The Beautiful Memory Game</h1></div>
 
 <div class="centerShit">
@@ -98,8 +98,20 @@
     <p>Red: {redPoints}</p>
 </aside>
 <aside class="turn" class:blue={blueTurn}></aside>
-
+</div>
 <style>
+    .card:not(.flipped){
+        transition: transform 0.3s ease;
+    }
+    .card:not(.flipped):hover{
+        transform: scale(1.2);
+    }
+    .bigAssbackground{
+        background-image: url("https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif");
+        background-size:stretch;
+        width: auto;
+        height: 1500px;
+    }
 .centerShit{
     padding-top:30px;
     display:flex;
@@ -152,7 +164,7 @@ aside{
 
 .blue {
     left:10px;
-    background-color: purple;
+    background-color: rgb(49, 0, 128);
 }
 
 p{
@@ -169,4 +181,18 @@ p{
     transform: rotateY(180deg);
 
 }
+
+@media (min-height: 500px){
+  main{
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+}
+@media (max-height: 500px){
+  main{
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(2, 100px);
+  }
+}
+          
 </style>    

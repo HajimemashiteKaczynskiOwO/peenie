@@ -70,6 +70,12 @@ function removeBoughtItem(vara_index){
 </main>
 
 <style>
+main{
+    background-image: url("https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif");
+        background-size:stretch;
+        width: auto;
+        height: 1500px;
+}
     .grid-container {
         position: absolute;
         top:50%;

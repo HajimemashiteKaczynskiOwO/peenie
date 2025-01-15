@@ -3,7 +3,7 @@
 		<a href="{base}/"><b>Beautiful House</b></a>
 		<a href="{base}/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
 		<a href="{base}/shoppinglist"><b>Shopping List</b></a>
-		<a href="{base}/about"><b>About</b></a>
+		<a href="{base}/search"><b>Search</b></a>
 		<a href="{base}/register"><b>Register</b></a>
 		<a href="{base}/login"><b>Login</b></a>
 		<a href="{base}/memory"><b>Memory</b></a>
@@ -36,10 +36,17 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 <style>
+div{
+	background-image: url("https://64.media.tumblr.com/1ab78cb3a68fda2be8acb21ac2dd4cbc/tumblr_o2vkno6Isj1tn9inco1_r1_540.gifv");
+        background-size:stretch;
+        width: auto;
+        height: auto;
+}
 .links {
 display:flex;
 align-items: center;
 justify-content: space-evenly;
+color:white;
 }
 a{
 	padding:10px;

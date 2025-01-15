@@ -32,6 +32,7 @@ async function write(message) {
 <audio controls autoplay loop=true disableremoteplayback class="audio">
     <source src="mp3/toujours.mp3" type="audio/mp3">
 </audio>
+
 <div class="entirewebsite">
 <main>
     <div class="chatHead">
@@ -60,8 +61,8 @@ async function write(message) {
         write(text);
         formElement.reset()
     }}>
-    <input type="text" name="text" class="textBox" minlength=1 maxlength="64" placeholder="Express your love...">
-    <input type="submit" name="submit">
+    <input type="text" name="text" class="textBox" minlength=2 placeholder="Express your love...">
+    <input type="submit" name="submit" minlength=2>
         </form>
     </div>
 </main>
@@ -81,13 +82,15 @@ async function write(message) {
 .chatTalk{
     display:flex;
     justify-content: center;
-    padding: 10px;
+    margin-bottom: 100px;
     
 }
 .msgSection{
     color:rgb(249, 245, 245);
     height:90%;
     overflow-y: scroll;
+    font-size:40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .replies{
     margin:10px;
@@ -95,12 +98,17 @@ async function write(message) {
 }
 .user{
     background-color:rgb(176, 148, 254);
+    padding-top:5px;
+    height:3.5vh;
     display:flex;
+    color:black;
     justify-content: flex-end;
     justify-self: flex-start;
 }
 .Eliza{
     background-color: rgb(82, 9, 166);
+    padding-top:5px;
+    height:3.5vh;
     padding-left:2px;
 }
 
@@ -123,13 +131,10 @@ async function write(message) {
 display:none;
 }
 
-.textBox{
-
-}
 .TalkyHead h1{
     color:white;
     font-style: italic;
-    font-size:larger
+    font-size:40px;
 }
 .TalkyHead{
     padding: auto;
@@ -159,7 +164,6 @@ display:none;
 .entirewebsite{
     background-image: url("https://cdn.pixabay.com/animation/2023/03/19/02/34/02-34-11-741_512.gif");
         background-size:stretch;
-
         width: auto;
         height: 1500px;
 }
