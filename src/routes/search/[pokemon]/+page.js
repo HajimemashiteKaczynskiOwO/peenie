@@ -12,7 +12,7 @@ export async function load({ params, fetch }) {
 
     /* Perform a networked HTTP GET request to an external API  */
     /* Documentation: https://pokeapi.co */
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+params.pokemon, {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+params.pokemon.toLowerCase(), {
         method: 'GET', // *GET, POST, PUT, DELETE, etc. 
     });
     /* If the response status is not 200, meaning did not find a pokemon, throw an error  */

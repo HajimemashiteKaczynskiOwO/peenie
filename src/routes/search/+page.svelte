@@ -4,5 +4,5 @@
 
 </script>
 <form on:submit|preventDefault={()=> goto('/search/'+search)}>
-    <input type="text" placeholder="Search for a Pokemon" bind:value={search} />
+    <input type="text" placeholder="Search for a Pokemon" bind:value={search}/>
 </form>

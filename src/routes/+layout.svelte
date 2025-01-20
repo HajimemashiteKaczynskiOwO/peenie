@@ -3,7 +3,7 @@
 		<a href="{base}/"><b>Beautiful House</b></a>
 		<a href="{base}/photoapp"><b>The Wondrous and Amazing Photo App</b></a>
 		<a href="{base}/shoppinglist"><b>Shopping List</b></a>
-		<a href="{base}/search"><b>Search</b></a>
+		<a href="{base}/search"><b>Pokésearch</b></a>
 		<a href="{base}/register"><b>Register</b></a>
 		<a href="{base}/login"><b>Login</b></a>
 		<a href="{base}/memory"><b>Memory</b></a>

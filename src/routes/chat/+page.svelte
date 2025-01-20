@@ -1,6 +1,8 @@
 <script>
 import ElizaBot from "elizabot";
 import { enhance } from "$app/forms";
+import {  chat_store  } from "$lib/chat";
+import {onMount} from 'svelte';
 
 
 const eliza = new ElizaBot();
@@ -8,26 +10,31 @@ let chat = [{ user: 'Eliza', message: "My name is George Droyd. Shiiieeet, How c
 let botName ="Eliza"
 let userName ="user"
 let isWriting=false
+let userMessage="";
 
 async function write(message) {
     if (isWriting) {return}
-    chat.push({user : "user", message :message})
-    chat = chat
-    var element = document.getElementById("visible");
+chat.push({user : "user", message :message})
+var element = document.getElementById("visible");
+chat = chat
 //Ändrar elementets CSS-egenskap display till default
-    element.style.display = "block"; // Visa elementet
-    isWriting= true
+element.style.display = "block"; // Visa elementet
+isWriting= true
+chat = chat
+await new Promise((r) => setTimeout(r, 1000 + Math.random() * 1000));
+chat_store.update(chat_store.update(chat => [...chat, {user: 'user', message}]));
+isWriting = false
+chat = chat
+element.style.display = "none";
 
-    await new Promise((r) => setTimeout(r, 1000 + Math.random() * 1000));
-    isWriting = false
-
-    element.style.display = "none";
-
-    let response = eliza.transform(message)
-    chat.push({user : botName, message : response})
-    chat=chat
+let response = eliza.transform(message)
+chat.push({user : botName, message : response})
+chat=chat
 }
 
+function clearChat(){
+    chat_store.set([{ user: 'Eliza', message: "My name is George Droyd. Shiiieeet, How can I assist you?" }]);
+}
 </script>
 <audio controls autoplay loop=true disableremoteplayback class="audio">
     <source src="mp3/toujours.mp3" type="audio/mp3">
@@ -63,7 +70,11 @@ async function write(message) {
     }}>
     <input type="text" name="text" class="textBox" minlength=2 placeholder="Express your love...">
     <input type="submit" class="subby" name="submit" minlength=2>
+    <button class="clearshit" on:click={clearChat}>
+            Clear the Chat
+        </button>
         </form>
+        
     </div>
 </main>
 </div>
@@ -85,8 +96,8 @@ async function write(message) {
 .chatTalk{
     display:flex;
     justify-content: center;
-    margin-top: -25px;
-    border-radius: 10px;
+    margin-top: -5vh;
+    border-style: ridge;
 }
 .msgSection{
     color:rgb(249, 245, 245);
@@ -101,8 +112,10 @@ async function write(message) {
 }
 .user{
     background-color:rgb(176, 148, 254);
-    padding-top:5px;
+    padding-top:0.3vh;
     height:3.5vh;
+    padding-left:2px;
+    font-size:30px;
     display:flex;
     color:black;
     justify-content: flex-end;
@@ -110,9 +123,17 @@ async function write(message) {
 }
 .Eliza{
     background-color: rgb(82, 9, 166);
-    padding-top:5px;
+    padding-top:0.3vh;
     height:3.5vh;
     padding-left:2px;
+    font-size:30px;
+}
+
+.clearshit{
+    color:red;
+    margin:auto;
+    cursor:pointer;
+    border-radius: 100px;
 }
 
 #visible{
