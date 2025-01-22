@@ -80,7 +80,6 @@
       transition: transform 0.3s ease;
     }
     .searcher:hover{
-      
       transform:scale(1.05)
     }
     article{

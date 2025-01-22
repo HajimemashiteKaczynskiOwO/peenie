@@ -1,6 +1,7 @@
 <script>
     import {goto} from "$app/navigation";
     import { writable } from 'svelte/store';
+    import { base } from '$app/paths';
 
     let search = "";
     let recentSearches = writable([]);
@@ -17,10 +18,9 @@
 </script>
 
 <main>
-<form on:submit|preventDefault={() => { goto('/search/' + search); addSearch(); }}>
-    <input type="text" placeholder="Search for a Pokemon" bind:value={search}/>
-</form>
-</main>
+    <form on:submit|preventDefault={() => { goto(base+'/search/' + search); }}>
+    <input class="searcher" type="text" placeholder="Search for a Pokemon" bind:value={search}/>
+  </main>
 <footer>
     <nav>
         <ul>
@@ -43,6 +43,14 @@
         color: white;
         text-align:center;
         padding: 10px 0;
+    }
+    .searcher{
+      width:50vw;
+      border-radius: 100px;
+      transition: transform 0.3s ease;
+    }
+    .searcher:hover{
+      transform:scale(1.05)
     }
 
 </style>
