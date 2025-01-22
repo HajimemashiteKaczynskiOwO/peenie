@@ -1,10 +1,13 @@
 <script>
 import ElizaBot from "elizabot";
 import { enhance } from "$app/forms";
-import {  chat_store  } from "$lib/chat";
+import { chat_store } from "$lib/chat";
 import {onMount} from 'svelte';
+import {base} from '$app/paths';
 
-
+onMount(() => {
+        chat = $chat_store.length>2?JSON.parse($chat_store):[{ user: 'Eliza', message: "My name is George Droyd. Shiiieeet, How can I assist you?" }];
+    });
 const eliza = new ElizaBot();
 let chat = [{ user: 'Eliza', message: "My name is George Droyd. Shiiieeet, How can I assist you?" }];
 let botName ="Eliza"
@@ -14,6 +17,7 @@ let userMessage="";
 
 async function write(message) {
     if (isWriting) {return}
+    $chat_store = JSON.stringify(chat)
 chat.push({user : "user", message :message})
 var element = document.getElementById("visible");
 chat = chat
@@ -21,19 +25,21 @@ chat = chat
 element.style.display = "block"; // Visa elementet
 isWriting= true
 chat = chat
-await new Promise((r) => setTimeout(r, 1000 + Math.random() * 1000));
-chat_store.update(chat_store.update(chat => [...chat, {user: 'user', message}]));
+await new Promise((r) => setTimeout(r, 1000 + Math.random() * 500));
+
 isWriting = false
 chat = chat
 element.style.display = "none";
-
 let response = eliza.transform(message)
 chat.push({user : botName, message : response})
+$chat_store = JSON.stringify(chat)
 chat=chat
 }
 
 function clearChat(){
-    chat_store.set([{ user: 'Eliza', message: "My name is George Droyd. Shiiieeet, How can I assist you?" }]);
+    chat = [{ user: 'Eliza', message: "My name is George Droyd. Shiiieeet, How can I assist you?" }];
+    $chat_store = JSON.stringify(chat)
+    chat = chat
 }
 </script>
 <audio controls autoplay loop=true disableremoteplayback class="audio">
@@ -44,7 +50,7 @@ function clearChat(){
 <main>
     <div class="chatHead">
         <div class="TalkyHead">
-            <img src="images/droyda.png" height="50px" width="50px">
+            <img src="{base}/images/droyda.png" height="50px" width="50px">
             <h1>George Droyd</h1>
         </div>
         <section class="msgSection">
@@ -70,11 +76,10 @@ function clearChat(){
     }}>
     <input type="text" name="text" class="textBox" minlength=2 placeholder="Express your love...">
     <input type="submit" class="subby" name="submit" minlength=2>
-    <button class="clearshit" on:click={clearChat}>
-            Clear the Chat
-        </button>
-        </form>
-        
+</form>
+<button class="clearshit" on:click={clearChat}>
+    Clear the Chat
+</button>
     </div>
 </main>
 </div>
@@ -130,10 +135,13 @@ function clearChat(){
 }
 
 .clearshit{
-    color:red;
+    color:white;
     margin:auto;
     cursor:pointer;
     border-radius: 100px;
+    background-color: blue;
+    width:10vw;
+    height:4vh;
 }
 
 #visible{

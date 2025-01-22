@@ -1,11 +1,11 @@
 <script>
     let images = [
-    "images/1727730631300u.png",
-    "images/tits.webp",
-    "images/calmfly.png",
-    "images/pou.jpeg",
-    "images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp",
-    "images/static-assets-upload10830305506337304706.webp"
+        "images/1727730631300u.png",
+        "images/tits.webp",
+        "images/calmfly.png",
+        "images/pou.jpeg",
+        "images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp",
+        "images/static-assets-upload10830305506337304706.webp"
     ];
     let images_alt = [
         "meh",
@@ -14,17 +14,17 @@
         "tit2s",
         "m3eh",
         "tits1"
-    ]
+    ];
 
     let cards = [];
     let flipCount = 0;
-    let amount_of_cards = 12
+    let amount_of_cards = 12;
     let flippedCards = [];
-    let bluePoints = 0
-    let redPoints = 0
-    let blueTurn = true
+    let bluePoints = 0;
+    let redPoints = 0;
+    let blueTurn = true;
 
-    for (let i = 0; i < amount_of_cards; i++) { //SKAPA KORTEN!!!
+    for (let i = 0; i < amount_of_cards; i++) { // SKAPA KORTEN!!!
         cards.push({
             id: i,
             image: images[i % images.length],
@@ -34,48 +34,63 @@
         });
     }
 
-    cards.sort(() => Math.random() - 0.50000000069); //randomize the shits
+    cards.sort(() => Math.random() - 0.50000000069); // randomize the cards
 
     function flipCard(card) {
-        if (card.flipped || card.matched || flipCount==2){
+        if (card.flipped || card.matched || flipCount === 2) {
             return;
         }
         
-        card.flipped = true; // mark dis card as flipped
+        card.flipped = true; // mark this card as flipped
         flipCount++;
         flippedCards.push(card);
-        cards = cards
-        
-        if (flipCount ===2) {
+
+        // Update the cards array to reflect the new state
+        cards = [...cards]; 
+
+        if (flipCount === 2) {
             checkForMatch();
         }
     }
+
     function checkForMatch() {
         const [card1, card2] = flippedCards;
 
-        if (flippedCards.length === 2){
-        if (card1.image === card2.image) {
-            if (blueTurn) {
-                bluePoints+=1;
-            } else {
-                redPoints+=1;
+        if (flippedCards.length === 2) {
+            if (card1.image === card2.image) {
+                if (blueTurn) {
+                    bluePoints += 1;
+                } else {
+                    redPoints += 1;
+                }
+                card1.matched = true;
+                card2.matched = true;
+                // Update cards to reflect the matched state
+                cards = [...cards];
             }
-            card1.matched = true;
-            card2.matched = true;
-            cards = cards
-            flipCount=0
-            }   
-            // Om korten inte matchar, vänd tillbaka dem efter 1 sekund
+            // If cards do not match, flip them back after 1 second
             setTimeout(() => {
                 cards.forEach((card) => {
                     card.flipped = card.matched;
                 });
-                flipCount=0;
-                cards=cards;
-            },1000);
+                flipCount = 0; // Reset flip count
+                flippedCards = []; // Reset flipped cards array
+                cards = [...cards]; // Update cards array to reflect new state
+            }, 1000);
             blueTurn = !blueTurn;
         }
-        flippedCards=[];
+    }
+
+    // Function to flip all cards
+    function flipCards() {
+        cards.forEach((card) => {
+            card.flipped = false; // Set all cards to flipped = false
+            card.matched = false; // Optionally reset matched status
+        });
+        cards.sort(() => Math.random() - 0.50000000069); // randomize the cards
+        flipCount = 0; // Reset flip count
+        flippedCards = []; // Reset flipped cards array
+        cards = [...cards]; // Update cards array to reflect new state
     }
 </script>
 <div class="bigAssbackground">
@@ -89,6 +104,7 @@
             <img src="images/droydCord.png" alt="Backside">
         </div>
         {/each}
+        <button class="reset"><img class="resetPic" src="https://static.vecteezy.com/system/resources/thumbnails/002/205/850/small/refresh-icon-free-vector.jpg" on:click={flipCards}></button>
     </main></div>
 
 <aside class="blue">
@@ -100,6 +116,13 @@
 <aside class="turn" class:blue={blueTurn}></aside>
 </div>
 <style>
+    .resetPic{
+        border-radius: 100px;
+        transform: scale(0.7);
+    }
+    .resetPic:hover{
+        transform: scale(0.75);
+    }
     .card:not(.flipped){
         transition: transform 0.3s ease;
     }
@@ -136,7 +159,10 @@
     transform-style: preserve-3d;
     transition: transform 0.5s;
     cursor: pointer;
-
+}
+.reset{
+    display:flex;
+    background-color: rgb(174, 0, 255);
 }
 
 img{

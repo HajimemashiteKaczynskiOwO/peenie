@@ -28,7 +28,7 @@
     <form on:submit|preventDefault={handleSubmit}>
         <input type="submit" id="register" value="Create your account">
     </form>
-        <h4>Already have an Account? <a href="/login"><i>Login</i></a> </h4>
+        <h4>Already have an Account? <a href="{base}/login"><i>Login</i></a> </h4>
 </div>
 
 </div>
@@ -133,5 +133,5 @@ function handleSubmit(){
 //courtesy of samir's big big brain
 
 
-
+import { base } from '$app/paths';
 </script>

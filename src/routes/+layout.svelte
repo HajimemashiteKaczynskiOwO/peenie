@@ -62,6 +62,10 @@ padding: 0%;
 height: 100vh;
 width: 100vw;
 }    
+@font-face {
+	font-family: 'sixcaps';
+	src: url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+}
 </style>
 
 <slot />

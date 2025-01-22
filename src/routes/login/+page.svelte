@@ -16,7 +16,7 @@
         <form on:submit|preventDefault={handleSubmit}>
             <input type="submit" id="login" value="Log in">
         </form>
-            <h4>Don't have an Account? <a href="/register"><i>Register</i></a></h4>
+            <h4>Don't have an Account? <a href="{base}/register"><i>Register</i></a></h4>
     </div>
     
     </div>
@@ -82,6 +82,7 @@
 </style>
 
 <script>
+	import { base } from '$app/paths';
     import {users_store} from "$lib/user";
     import { onMount } from 'svelte';
     
