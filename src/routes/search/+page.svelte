@@ -20,7 +20,7 @@
 <main>
     <form on:submit|preventDefault={() => { goto(base+'/search/' + search); }}>
     <input class="searcher" type="text" placeholder="Search for a Pokemon" bind:value={search}/>
-  </main>
+</main>
 <footer>
     <nav>
         <ul>

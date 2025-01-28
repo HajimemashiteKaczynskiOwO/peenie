@@ -111,7 +111,7 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.WuNaUQPd.css"
+      "_app/immutable/assets/_layout.DAxVdHqE.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -151,6 +151,18 @@
     ],
     "css": [
       "_app/immutable/assets/_page.DA4qc2uD.css"
+    ]
+  },
+  "src/routes/diffShit/+page.svelte": {
+    "file": "entries/pages/diffShit/_page.svelte.js",
+    "name": "entries/pages/diffShit/_page.svelte",
+    "src": "src/routes/diffShit/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.d42xMDSI.css"
     ]
   },
   "src/routes/login/+page.svelte": {
@@ -284,7 +296,7 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.B7Hxbcq2.css"
+      "_app/immutable/assets/_page.DzH8ADmx.css"
     ]
   },
   "src/routes/shoppinglist/+page.svelte": {

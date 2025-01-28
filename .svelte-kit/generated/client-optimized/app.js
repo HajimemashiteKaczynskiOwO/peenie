@@ -16,7 +16,8 @@ export const nodes = [
 	() => import('./nodes/12'),
 	() => import('./nodes/13'),
 	() => import('./nodes/14'),
-	() => import('./nodes/15')
+	() => import('./nodes/15'),
+	() => import('./nodes/16')
 ];
 
 export const server_loads = [];
@@ -25,14 +26,15 @@ export const dictionary = {
 		"/": [5],
 		"/about": [6],
 		"/chat": [7],
-		"/login": [8],
-		"/maf": [9],
-		"/memory": [10],
-		"/photoapp": [11],
-		"/register": [12],
-		"/search": [13,[2]],
-		"/search/[pokemon]": [14,[2,3],[,4]],
-		"/shoppinglist": [15]
+		"/diffShit": [8],
+		"/login": [9],
+		"/maf": [10],
+		"/memory": [11],
+		"/photoapp": [12],
+		"/register": [13],
+		"/search": [14,[2]],
+		"/search/[pokemon]": [15,[2,3],[,4]],
+		"/shoppinglist": [16]
 	};
 
 export const hooks = {
