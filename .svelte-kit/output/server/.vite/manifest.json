@@ -165,6 +165,18 @@
       "_app/immutable/assets/_page.d42xMDSI.css"
     ]
   },
+  "src/routes/diffShit/registerPage/+page.svelte": {
+    "file": "entries/pages/diffShit/registerPage/_page.svelte.js",
+    "name": "entries/pages/diffShit/registerPage/_page.svelte",
+    "src": "src/routes/diffShit/registerPage/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BC8rE1--.css"
+    ]
+  },
   "src/routes/login/+page.svelte": {
     "file": "entries/pages/login/_page.svelte.js",
     "name": "entries/pages/login/_page.svelte",
@@ -267,7 +279,7 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/_error.8p9azigA.css"
+      "_app/immutable/assets/_error.BReh3qBn.css"
     ]
   },
   "src/routes/search/[pokemon]/+layout.js": {
@@ -296,7 +308,7 @@
       "_index2.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DzH8ADmx.css"
+      "_app/immutable/assets/_page.B_mpL7hm.css"
     ]
   },
   "src/routes/shoppinglist/+page.svelte": {

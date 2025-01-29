@@ -139,7 +139,16 @@ function randomizeNumbers() {
         }, 1000);
     }
 
+    function yaAssAccepted() {
+        if (username && password) {
+            window.location.href = 'hajimemashitekaczynskiowo.github.io/diffShit/registerPage';
+        }
+    }
+
 </script>
+<div class="subText">
+    <h1>make a temporary account to prove youre not a bot</h1>
+</div>
 <div>
 <button class ="register" on:click={()=>{alert(username!=""?"Register as "+username+"?":"Enter username!")}}>Register as {username}</button>
 </div>

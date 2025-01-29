@@ -101,7 +101,7 @@ import { afterNavigate } from '$app/navigation';
   }
   .pokemonName {
     color: #fcb328;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
     margin: 20px 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -114,7 +114,7 @@ import { afterNavigate } from '$app/navigation';
     margin-top: 30px;
   }
   .pokemonName:hover{
-    transform:scale(1.05)
+    transform:scale(1.01)
   }
   .sprite-section {
     flex: 1;
