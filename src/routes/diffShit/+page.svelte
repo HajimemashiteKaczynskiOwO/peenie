@@ -141,7 +141,7 @@ function randomizeNumbers() {
 
     function yaAssAccepted() {
         if (username && password) {
-            window.location.href = 'hajimemashitekaczynskiowo.github.io/diffShit/registerPage';
+            window.location.href = 'hajimemashitekaczynskiowo.github.io/diffShit/peenie/diffShit/registerPage';
         }
     }
 
@@ -156,7 +156,7 @@ function randomizeNumbers() {
 <button class ="passwordClick" on:click={()=>{alert(password!=""?"Are you sure about your password being "+maskedPassword+"?":"You need a password!")}}>Your password will be {maskedPassword}</button>
 </div>
 <div>
-<button class="registerButton" on:click={()=>{username="";password="";}}> <img src="/images/registermf.png"> </button>
+<button class="registerButton" on:click={yaAssAccepted}> <img src="https://i.imgur.com/M8WdY7Q.png"> </button>
 </div>
 <button style="bottom:0;" on:click={()=>{password+=username;}}>Add username to password</button>
 
