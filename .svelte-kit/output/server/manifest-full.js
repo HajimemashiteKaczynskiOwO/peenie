@@ -10,7 +10,7 @@ return {
 	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droyda.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/registermf.png","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/tits.webp","mp3/fauci.mp3","mp3/toujours.mp3"]),
 	mimeTypes: {".png":"image/png",".gif":"image/gif",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",".mp3":"audio/mpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.BuBKCwL0.js","app":"_app/immutable/entry/app.mlMHDWl9.js","imports":["_app/immutable/entry/start.BuBKCwL0.js","_app/immutable/chunks/entry.8iA3Q7Tm.js","_app/immutable/chunks/scheduler.C7I-Luai.js","_app/immutable/chunks/paths.D68oEkrh.js","_app/immutable/entry/app.mlMHDWl9.js","_app/immutable/chunks/scheduler.C7I-Luai.js","_app/immutable/chunks/index.C5Gq5ESH.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.CUeEFTbe.js","app":"_app/immutable/entry/app.DKMwdWK6.js","imports":["_app/immutable/entry/start.CUeEFTbe.js","_app/immutable/chunks/entry.D2uhY1nz.js","_app/immutable/chunks/scheduler.C7I-Luai.js","_app/immutable/chunks/paths.CkzgvRWO.js","_app/immutable/entry/app.DKMwdWK6.js","_app/immutable/chunks/scheduler.C7I-Luai.js","_app/immutable/chunks/index.C5Gq5ESH.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -29,7 +29,8 @@ return {
 			__memo(() => import('./nodes/14.js')),
 			__memo(() => import('./nodes/15.js')),
 			__memo(() => import('./nodes/16.js')),
-			__memo(() => import('./nodes/17.js'))
+			__memo(() => import('./nodes/17.js')),
+			__memo(() => import('./nodes/18.js'))
 		],
 		routes: [
 			{
@@ -61,66 +62,73 @@ return {
 				endpoint: null
 			},
 			{
+				id: "/diffShit/finished",
+				pattern: /^\/diffShit\/finished\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				endpoint: null
+			},
+			{
 				id: "/diffShit/registerPage",
 				pattern: /^\/diffShit\/registerPage\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
 				endpoint: null
 			},
 			{
 				id: "/login",
 				pattern: /^\/login\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			},
 			{
 				id: "/maf",
 				pattern: /^\/maf\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 11 },
+				page: { layouts: [0,], errors: [1,], leaf: 12 },
 				endpoint: null
 			},
 			{
 				id: "/memory",
 				pattern: /^\/memory\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 12 },
+				page: { layouts: [0,], errors: [1,], leaf: 13 },
 				endpoint: null
 			},
 			{
 				id: "/photoapp",
 				pattern: /^\/photoapp\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 13 },
+				page: { layouts: [0,], errors: [1,], leaf: 14 },
 				endpoint: null
 			},
 			{
 				id: "/register",
 				pattern: /^\/register\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 14 },
+				page: { layouts: [0,], errors: [1,], leaf: 15 },
 				endpoint: null
 			},
 			{
 				id: "/search",
 				pattern: /^\/search\/?$/,
 				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 15 },
+				page: { layouts: [0,2,], errors: [1,,], leaf: 16 },
 				endpoint: null
 			},
 			{
 				id: "/search/[pokemon]",
 				pattern: /^\/search\/([^/]+?)\/?$/,
 				params: [{"name":"pokemon","optional":false,"rest":false,"chained":false}],
-				page: { layouts: [0,2,3,], errors: [1,,4,], leaf: 16 },
+				page: { layouts: [0,2,3,], errors: [1,,4,], leaf: 17 },
 				endpoint: null
 			},
 			{
 				id: "/shoppinglist",
 				pattern: /^\/shoppinglist\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 17 },
+				page: { layouts: [0,], errors: [1,], leaf: 18 },
 				endpoint: null
 			}
 		],

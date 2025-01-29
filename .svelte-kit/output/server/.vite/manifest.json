@@ -162,7 +162,19 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.d42xMDSI.css"
+      "_app/immutable/assets/_page.OD_4583t.css"
+    ]
+  },
+  "src/routes/diffShit/finished/+page.svelte": {
+    "file": "entries/pages/diffShit/finished/_page.svelte.js",
+    "name": "entries/pages/diffShit/finished/_page.svelte",
+    "src": "src/routes/diffShit/finished/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CgW4IA8c.css"
     ]
   },
   "src/routes/diffShit/registerPage/+page.svelte": {

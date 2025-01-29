@@ -1,14 +1,35 @@
 <script>
-    let username = '';
-    let password = '';
-
     function handleSubmit() {
-        if (username && password) {
-            window.location.href = 'https://x.com';
+        // Get values from the form
+        let ageCheck = document.getElementById("ageCheck").value;  // Getting value from <select>
+        let age = document.getElementById("age").value;            // Getting value from <input>
+        age = Number(age);
+        // Check if conditions are met
+        if (ageCheck === "yes" && age >= 17.5) {
+            window.location.href = '/diffShit/finished';
+        } else {
+            alert("You must select 'Yes' and be at least 17 and a half years old to proceed.");
         }
     }
 </script>
 
+<div class="register-text">register</div>
+
+<div class="form-container">
+    <div class="form-group">
+        <label for="ageCheck">How Old Are you? Are you Olds enough..?</label>
+<select id="ageCheck" name="ageCheck">
+    <option value="no">No</option>
+    <option value="yes">Yes</option>
+</select>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="age" id="age"/>
+    </div>
+    <button class="submit-button" on:click={handleSubmit}>Submit</button>
+</div>
 <style>
     .register-text {
         position: absolute;
@@ -40,17 +61,3 @@
         cursor: pointer;
     }
 </style>
-
-<div class="register-text">register</div>
-
-<div class="form-container">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" bind:value={username} />
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" bind:value={password} />
-    </div>
-    <button class="submit-button" on:click={handleSubmit}>Submit</button>
-</div>

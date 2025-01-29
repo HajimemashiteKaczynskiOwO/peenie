@@ -11,11 +11,14 @@
     let letters = [];
     let username = "";
     $: maskedPassword = "*".repeat(password.length);
-
-
-    // max %
+    $: isRegisterDisabled = !(username.length >= 3 && password.length >= 8) || proveButtons.length > 0;
+    let proveButtons = [];
+    let proveButtonInterval;
+    let backgroundColor = 'black';
+    let registerButtonPosition = 'left';
     let maxWidth = 95;
     let maxHeight = 90;
+    let headerPosition = 'left';
 
     function randomizeLetter(letter){
         let tempLeft;
@@ -83,29 +86,57 @@ function randomizeNumbers() {
         randomizeLetters();
         randomizeNumbers();
 
-        // Update all positions every 1 second for letters
+        // Update all positions 
         setInterval(() => {
             randomizeLetters();
-        }, 1500);
-
-        // Update all positions every 0.5 seconds for numbers
+        }, 850);
         setInterval(() => {
             randomizeNumbers();
-        }, 1000);
-
+        }, 750);
         // Set random background color every 250ms
         setInterval(() => {
             randA = Math.floor(Math.random() * 256); // Random value between 0-255
             randB = Math.floor(Math.random() * 256);
             randC = Math.floor(Math.random() * 256);
-
             // Update CSS variables for root element
             document.documentElement.style.setProperty("--randA", randA);
             document.documentElement.style.setProperty("--randB", randB);
             document.documentElement.style.setProperty("--randC", randC);
         }, 500);
+        setInterval(() => {
+            const color = Math.random() > 0.5 ? 'red' : 'green';
+            const top = Math.random() * (window.innerHeight - 100);
+            const left = Math.random() * (window.innerWidth - 100);
+            proveButtons = [...proveButtons, { id: Date.now(), color, top, left }];
+        }, 1250);
+        setInterval(() => {
+            backgroundColor = backgroundColor === 'black' ? 'white' : 'black';
+        }, 5500);
+        setInterval(() => {
+            registerButtonPosition = registerButtonPosition === 'left' ? 'right' : 'left';
+        }, 1500);
+    });
+    function removeProveButton(id) {
+        proveButtons = proveButtons.filter(button => button.id !== id);
+    }
+    onMount(() => {
+        proveButtonInterval = setInterval(() => {
+            const color = Math.random() > 0.5 ? 'red' : 'green';
+            const top = Math.random() * (window.innerHeight - 100);
+            const left = Math.random() * (window.innerWidth - 100);
+            proveButtons.push({ id: Date.now(), color, top, left });
+        }, 2000);
     });
 
+    // Switch header position every 5 seconds
+    setInterval(() => {
+        headerPosition = headerPosition === 'left' ? 'right' : 'left';
+    }, 2000);
+
+    // Switch background color every 10 seconds
+    setInterval(() => {
+        backgroundColor = backgroundColor === 'white' ? 'white' : 'black';
+    }, 2000);
     
 
     function addLetter(letter,i){
@@ -140,24 +171,32 @@ function randomizeNumbers() {
     }
 
     function yaAssAccepted() {
-        if (username && password) {
-            window.location.href = 'hajimemashitekaczynskiowo.github.io/diffShit/peenie/diffShit/registerPage';
+        if (!isRegisterDisabled) {
+            window.location.href = 'diffShit/registerPage';
         }
     }
 
 </script>
-<div class="subText">
-    <h1>make a temporary account to prove youre not a bot</h1>
+
+<div style="background-color: {backgroundColor}; position: fixed; top: 0; left: 0; right: 0; bottom: 0; transition: background-color 1s;">
+    <div class="subText">
+        <h1>make a temporary account to prove youre not a bot, MINIMUM 3 username characters and 8 characters in your password.</h1>
+    </div>
+
+
+<div class="button-container">
+    <button class="register" on:click={()=>{alert(username!=""?"Register as "+username+"?":"Enter username!")}}>Register as {username}</button>
+    <button class="passwordClick" on:click={()=>{alert(password!=""?"Are you sure about your password being "+maskedPassword+"?":"You need a password!")}}>Your password will be {maskedPassword}</button>
 </div>
-<div>
-<button class ="register" on:click={()=>{alert(username!=""?"Register as "+username+"?":"Enter username!")}}>Register as {username}</button>
-</div>
-<div>
-<button class ="passwordClick" on:click={()=>{alert(password!=""?"Are you sure about your password being "+maskedPassword+"?":"You need a password!")}}>Your password will be {maskedPassword}</button>
-</div>
-<div>
-<button class="registerButton" on:click={yaAssAccepted}> <img src="https://i.imgur.com/M8WdY7Q.png"> </button>
-</div>
+<div class="registerButton-container">
+    <button 
+        class="registerButton" 
+        on:click={yaAssAccepted} 
+        disabled={isRegisterDisabled}
+    > 
+        <img src="https://i.imgur.com/M8WdY7Q.png" alt="Register"> 
+    </button></div>
+
 <button style="bottom:0;" on:click={()=>{password+=username;}}>Add username to password</button>
 
 <div class="containerName">
@@ -177,8 +216,25 @@ function randomizeNumbers() {
     {/each}
 </div>
 
+{#each proveButtons as { id, color, top, left }}
+        <button 
+            class="prove-button" 
+            style="background-color: {color}; top: {top}px; left: {left}px;" 
+            on:click={() => removeProveButton(id)}
+        >
+            Click to confirm humanity
+        </button>
+    {/each}
 
+</div>
 <style>
+
+    .registerButton {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     .registerButton {
         padding: 0.5rem 1rem;
         background-color: #00ff6a;
@@ -188,7 +244,9 @@ function randomizeNumbers() {
         cursor: pointer;
         font-size: 1rem;
         transition: background-color 0.2s;
-        margin-top:200px;
+        margin-top: 200px;
+        width: 20vw;
+        height: 12vh;
     }
 
     .registerButton:hover {
@@ -198,14 +256,17 @@ function randomizeNumbers() {
     .registerButton:active {
         background-color: #d81d1d;
     }
-    .register{
+    .register {
         background-color: red;
+        position: absolute;
+        left: 10px;
+        top: 10vh;
     }
-    .passwordClick{
-        margin-top: 10vh;
-        margin-left:5vw;
-        top:0;
+    .passwordClick {
         background-color: rgb(255, 0, 0);
+        position: absolute;
+        right: 5vw;
+        top: 10vh;
     }
     .containerName{
         border: 2px solid rgb(182, 37, 255);
@@ -221,6 +282,48 @@ function randomizeNumbers() {
         margin: auto;
         position: relative;
     }
+    .registerButton:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background-color: #cccccc !important;
+    }
+    .prove-button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: fixed;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.3s;
+        animation: shake 2s infinite;
+    }
+    .prove-button:hover {
+        animation: shake 1.5s infinite alternate;
+    }
+    .button-container {
+        position: relative;
+        height: 100px;
+    }
+    .registerButton-container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        animation: switchPosition 1.5s infinite alternate;
+    }
+    .registerButton img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
     button{
         background-color: rgb(var(--randA, 0), var(--randB, 100), var(--randC, 0));
         border: 1px solid rgb(0, 0, 0);
@@ -232,6 +335,23 @@ function randomizeNumbers() {
         0% {opacity: 30%; transform: scale(0.25);}
         50% {opacity: 70%; transform: scale(0.75);}
         100% {opacity: 100%; transform: scale(1);}
+    }
+    @keyframes switchPosition {
+        0% { left: 0; }
+        100% { right: 0; }
+    }
+    @keyframes shake {
+            0% { transform: translate(0px, 0px) rotate(0deg); }
+            10% { transform: translate(-5px, -5px) rotate(-10deg); }
+            20% { transform: translate(5px, 5px) rotate(10deg); }
+            30% { transform: translate(-5px, 5px) rotate(-10deg); }
+            40% { transform: translate(5px, -5px) rotate(10deg); }
+            50% { transform: translate(0px, 0px) rotate(0deg); }
+            60% { transform: translate(-5px, 5px) rotate(-10deg); }
+            70% { transform: translate(5px, -5px) rotate(10deg); }
+            80% { transform: translate(5px, 5px) rotate(10deg); }
+            90% { transform: translate(-5px, -5px) rotate(-10deg); }
+            100% { transform: translate(0px, 0px) rotate(0deg); }
     }
     .ani{
         animation: fader 500ms linear;
