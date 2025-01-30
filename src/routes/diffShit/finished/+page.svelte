@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-
+    import {base} from '$app/paths';
     let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
     let buttonColor = colors[0];
     let interval;
@@ -28,7 +28,7 @@
     const confetti = createConfetti();
 
     function handleSubmit() {
-        window.location.href = '/register/';
+        window.location.href = {base}+'/register/';
     }
 </script>
 

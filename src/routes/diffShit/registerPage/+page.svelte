@@ -1,4 +1,5 @@
 <script>
+    import {base} from '$app/paths';
     function handleSubmit() {
         // Get values from the form
         let ageCheck = document.getElementById("ageCheck").value;  // Getting value from <select>
@@ -6,10 +7,10 @@
         age = Number(age);
         // Check if conditions are met
         if (ageCheck === "yes" && 88 > age >= 17) {
-            window.location.href = '/diffShit/finished';
+            window.location.href = {base}+'/diffShit/finished';
         } else {
             alert("Too Bad!");
-            window.location.href = '/diffShit/';
+            window.location.href = {base}+'/diffShit/';
         }
     }
 </script>
