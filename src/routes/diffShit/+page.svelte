@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-
+    import {base} from '$app/paths';
     let lettersString = "abcefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ".split("")
     let numbersString = "01234567890123456789012345678901234567890123456789".split("")
     let randA = 1;
@@ -108,7 +108,7 @@ function randomizeNumbers() {
             const top = Math.random() * (window.innerHeight - 100);
             const left = Math.random() * (window.innerWidth - 100);
             proveButtons = [...proveButtons, { id: Date.now(), color, top, left }];
-        }, 1250);
+        }, 2200);
         setInterval(() => {
             backgroundColor = backgroundColor === 'black' ? 'white' : 'black';
         }, 5500);
@@ -172,7 +172,7 @@ function randomizeNumbers() {
 
     function yaAssAccepted() {
         if (!isRegisterDisabled) {
-            window.location.href = 'diffShit/registerPage';
+            window.location.href = {base}+'diffShit/registerPage';
         }
     }
 
@@ -301,9 +301,6 @@ function randomizeNumbers() {
         z-index: 9999;
         transition: opacity 0.3s;
         animation: shake 2s infinite;
-    }
-    .prove-button:hover {
-        animation: shake 1.5s infinite alternate;
     }
     .button-container {
         position: relative;

@@ -5,10 +5,11 @@
         let age = document.getElementById("age").value;            // Getting value from <input>
         age = Number(age);
         // Check if conditions are met
-        if (ageCheck === "yes" && age >= 17.5) {
+        if (ageCheck === "yes" && 88 > age >= 17) {
             window.location.href = '/diffShit/finished';
         } else {
-            alert("You must select 'Yes' and be at least 17 and a half years old to proceed.");
+            alert("Too Bad!");
+            window.location.href = '/diffShit/';
         }
     }
 </script>
@@ -17,7 +18,7 @@
 
 <div class="form-container">
     <div class="form-group">
-        <label for="ageCheck">How Old Are you? Are you Olds enough..?</label>
+        <label for="ageCheck">How Old Are you? Are you Olds but Youngs enough..?</label>
 <select id="ageCheck" name="ageCheck">
     <option value="no">No</option>
     <option value="yes">Yes</option>
