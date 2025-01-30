@@ -1,16 +1,16 @@
 <script>
     import { base } from '$app/paths';
     import { goto } from '$app/navigation';
-    let ageCheck = "no";  // Bind to the select element
-    let age = "";         // Bind to the input element
+    let ageCheck = "no";
+    let age = "";  // This should be a string initially
+
     function handleSubmit() {
-        const numericAge = Number(age);
+        const numericAge = Number(age);  // Convert the age input to number
         
-        // Correct conditional check
         if (ageCheck === "yes" && numericAge >= 17 && numericAge < 88) {
-            goto(`${base}/diffShit/registerPage/`);
+            goto(`${base}/diffShit/finished/`);
         } else {
-            alert("Too Bad!");
+            alert("Too Bad! You entered Age: " + age + " and Selection: " + ageCheck);
             goto(`${base}/diffShit/`);
         }
     }
@@ -21,15 +21,17 @@
 <div class="form-container">
     <div class="form-group">
         <label for="ageCheck">How Old Are you? Are you Olds but Youngs enough..?</label>
-<select id="ageCheck" name="ageCheck">
-    <option value="no">No</option>
-    <option value="yes">Yes</option>
-</select>
+        <!-- Add bind:value here -->
+        <select id="ageCheck" bind:value={ageCheck} name="ageCheck">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
     </div>
 
     <div class="form-group">
         <label for="age">Age</label>
-        <input type="age" id="age"/>
+        <!-- Add bind:value and change input type -->
+        <input type="number" id="age" bind:value={age} />
     </div>
     <button class="submit-button" on:click={handleSubmit}>Submit</button>
 </div>
