@@ -172,7 +172,7 @@ function randomizeNumbers() {
 
     function yaAssAccepted() {
         if (!isRegisterDisabled) {
-            window.location.href = {base}+'diffShit/registerPage';
+            window.location.href = 'diffShit/registerPage';
         }
     }
 

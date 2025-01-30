@@ -7,10 +7,10 @@
         age = Number(age);
         // Check if conditions are met
         if (ageCheck === "yes" && 88 > age >= 17) {
-            window.location.href = {base}+'/diffShit/finished';
+            window.location.href = '/finished';
         } else {
             alert("Too Bad!");
-            window.location.href = {base}+'/diffShit/';
+            window.location.href = '/diffShit/';
         }
     }
 </script>
