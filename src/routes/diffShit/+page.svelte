@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
-    import {base} from '$app/paths';
+    import { base } from '$app/paths';
+    import { goto } from '$app/navigation';
     let lettersString = "abcefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ".split("")
     let numbersString = "01234567890123456789012345678901234567890123456789".split("")
     let randA = 1;
@@ -172,7 +173,7 @@ function randomizeNumbers() {
 
     function yaAssAccepted() {
         if (!isRegisterDisabled) {
-            window.location.href = 'diffShit/registerPage';
+            goto(`${base}/diffShit/registerPage/`);
         }
     }
 

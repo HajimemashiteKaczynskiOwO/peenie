@@ -1,16 +1,17 @@
 <script>
-    import {base} from '$app/paths';
+    import { base } from '$app/paths';
+    import { goto } from '$app/navigation';
+    let ageCheck = "no";  // Bind to the select element
+    let age = "";         // Bind to the input element
     function handleSubmit() {
-        // Get values from the form
-        let ageCheck = document.getElementById("ageCheck").value;  // Getting value from <select>
-        let age = document.getElementById("age").value;            // Getting value from <input>
-        age = Number(age);
-        // Check if conditions are met
-        if (ageCheck === "yes" && 88 > age >= 17) {
+        const numericAge = Number(age);
+        
+        // Correct conditional check
+        if (ageCheck === "yes" && numericAge >= 17 && numericAge < 88) {
             goto(`${base}/diffShit/registerPage/`);
         } else {
             alert("Too Bad!");
-            window.location.href = '/diffShit/';
+            goto(`${base}/diffShit/`);
         }
     }
 </script>

@@ -159,7 +159,8 @@
     "src": "src/routes/diffShit/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_client.js"
     ],
     "css": [
       "_app/immutable/assets/_page.C2nnK0Rf.css"
@@ -183,7 +184,8 @@
     "src": "src/routes/diffShit/registerPage/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_client.js"
     ],
     "css": [
       "_app/immutable/assets/_page.BC8rE1--.css"
