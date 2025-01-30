@@ -7,7 +7,7 @@
         age = Number(age);
         // Check if conditions are met
         if (ageCheck === "yes" && 88 > age >= 17) {
-            window.location.href = '/finished';
+            goto(`${base}/diffShit/registerPage/`);
         } else {
             alert("Too Bad!");
             window.location.href = '/diffShit/';
