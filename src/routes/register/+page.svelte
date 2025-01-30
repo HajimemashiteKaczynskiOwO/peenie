@@ -97,7 +97,7 @@ h4{
 
 
 
-
+import { goto } from '$app/navigation';
 import { onMount } from 'svelte';
 onMount(() => {
     /*Check if has more then 2 characters*/
@@ -125,6 +125,7 @@ function handleSubmit(){
         alert("Thank you!")
         users = [...users, new_user];
         $users_store = JSON.stringify(users);
+        goto(`${base}/login/`);
     }
 }
 

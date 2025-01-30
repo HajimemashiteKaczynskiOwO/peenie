@@ -249,6 +249,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
+      "_client.js",
       "_user.js",
       "_paths.js"
     ],
