@@ -172,7 +172,8 @@
     "src": "src/routes/diffShit/finished/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_client.js"
     ],
     "css": [
       "_app/immutable/assets/_page.BMRa591G.css"

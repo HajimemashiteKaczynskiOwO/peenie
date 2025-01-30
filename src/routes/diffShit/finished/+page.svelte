@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import {base} from '$app/paths';
+    import { goto } from '$app/navigation';
     let colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
     let buttonColor = colors[0];
     let interval;
