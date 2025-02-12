@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droyda.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/registermf.png","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/tits.webp","mp3/fauci.mp3","mp3/toujours.mp3"]),
+	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/aliengapejak.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droyda.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/registermf.png","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/tits.webp","mp3/fauci.mp3","mp3/impregnation.mp3","mp3/toujours.mp3","mp3/unlock.mp3"]),
 	mimeTypes: {".png":"image/png",".gif":"image/gif",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",".mp3":"audio/mpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.CO7Q_U-3.js","app":"_app/immutable/entry/app.CAwVzKqB.js","imports":["_app/immutable/entry/start.CO7Q_U-3.js","_app/immutable/chunks/entry.Zh9ncB7y.js","_app/immutable/chunks/scheduler.B7_pnvhY.js","_app/immutable/chunks/paths.BKkJZ4iE.js","_app/immutable/entry/app.CAwVzKqB.js","_app/immutable/chunks/scheduler.B7_pnvhY.js","_app/immutable/chunks/index.CaQqG0vX.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.BDqczTXq.js","app":"_app/immutable/entry/app.DIhEMoqI.js","imports":["_app/immutable/entry/start.BDqczTXq.js","_app/immutable/chunks/entry.DkjdlyzV.js","_app/immutable/chunks/scheduler.Bs8F_AUP.js","_app/immutable/chunks/index.Cq4WKqZ9.js","_app/immutable/chunks/paths.DxYfk_L2.js","_app/immutable/entry/app.DIhEMoqI.js","_app/immutable/chunks/scheduler.Bs8F_AUP.js","_app/immutable/chunks/index.B5tQNggO.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -30,7 +30,9 @@ return {
 			__memo(() => import('./nodes/15.js')),
 			__memo(() => import('./nodes/16.js')),
 			__memo(() => import('./nodes/17.js')),
-			__memo(() => import('./nodes/18.js'))
+			__memo(() => import('./nodes/18.js')),
+			__memo(() => import('./nodes/19.js')),
+			__memo(() => import('./nodes/20.js'))
 		],
 		routes: [
 			{
@@ -55,80 +57,94 @@ return {
 				endpoint: null
 			},
 			{
-				id: "/diffShit",
-				pattern: /^\/diffShit\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 8 },
-				endpoint: null
-			},
-			{
-				id: "/diffShit/finished",
-				pattern: /^\/diffShit\/finished\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
-				endpoint: null
-			},
-			{
-				id: "/diffShit/registerPage",
-				pattern: /^\/diffShit\/registerPage\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
-				endpoint: null
-			},
-			{
 				id: "/login",
 				pattern: /^\/login\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 11 },
+				page: { layouts: [0,], errors: [1,], leaf: 8 },
 				endpoint: null
 			},
 			{
 				id: "/maf",
 				pattern: /^\/maf\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 12 },
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
 				endpoint: null
 			},
 			{
 				id: "/memory",
 				pattern: /^\/memory\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 13 },
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
 				endpoint: null
 			},
 			{
 				id: "/photoapp",
 				pattern: /^\/photoapp\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 14 },
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			},
 			{
 				id: "/register",
 				pattern: /^\/register\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 15 },
+				page: { layouts: [0,], errors: [1,], leaf: 12 },
 				endpoint: null
 			},
 			{
 				id: "/search",
 				pattern: /^\/search\/?$/,
 				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 16 },
+				page: { layouts: [0,2,], errors: [1,,], leaf: 13 },
 				endpoint: null
 			},
 			{
 				id: "/search/[pokemon]",
 				pattern: /^\/search\/([^/]+?)\/?$/,
 				params: [{"name":"pokemon","optional":false,"rest":false,"chained":false}],
-				page: { layouts: [0,2,3,], errors: [1,,4,], leaf: 17 },
+				page: { layouts: [0,2,3,], errors: [1,,4,], leaf: 14 },
 				endpoint: null
 			},
 			{
 				id: "/shoppinglist",
 				pattern: /^\/shoppinglist\/?$/,
 				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 15 },
+				endpoint: null
+			},
+			{
+				id: "/trials",
+				pattern: /^\/trials\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 16 },
+				endpoint: null
+			},
+			{
+				id: "/trials/diffShit",
+				pattern: /^\/trials\/diffShit\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 17 },
+				endpoint: null
+			},
+			{
+				id: "/trials/diffShit/finished",
+				pattern: /^\/trials\/diffShit\/finished\/?$/,
+				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 18 },
+				endpoint: null
+			},
+			{
+				id: "/trials/diffShit/registerPage",
+				pattern: /^\/trials\/diffShit\/registerPage\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 19 },
+				endpoint: null
+			},
+			{
+				id: "/trials/snakelog",
+				pattern: /^\/trials\/snakelog\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 20 },
 				endpoint: null
 			}
 		],

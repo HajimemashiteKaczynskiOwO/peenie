@@ -19,7 +19,9 @@ export const nodes = [
 	() => import('./nodes/15'),
 	() => import('./nodes/16'),
 	() => import('./nodes/17'),
-	() => import('./nodes/18')
+	() => import('./nodes/18'),
+	() => import('./nodes/19'),
+	() => import('./nodes/20')
 ];
 
 export const server_loads = [];
@@ -28,17 +30,19 @@ export const dictionary = {
 		"/": [5],
 		"/about": [6],
 		"/chat": [7],
-		"/diffShit": [8],
-		"/diffShit/finished": [9],
-		"/diffShit/registerPage": [10],
-		"/login": [11],
-		"/maf": [12],
-		"/memory": [13],
-		"/photoapp": [14],
-		"/register": [15],
-		"/search": [16,[2]],
-		"/search/[pokemon]": [17,[2,3],[,4]],
-		"/shoppinglist": [18]
+		"/login": [8],
+		"/maf": [9],
+		"/memory": [10],
+		"/photoapp": [11],
+		"/register": [12],
+		"/search": [13,[2]],
+		"/search/[pokemon]": [14,[2,3],[,4]],
+		"/shoppinglist": [15],
+		"/trials": [16],
+		"/trials/diffShit": [17],
+		"/trials/diffShit/finished": [18],
+		"/trials/diffShit/registerPage": [19],
+		"/trials/snakelog": [20]
 	};
 
 export const hooks = {

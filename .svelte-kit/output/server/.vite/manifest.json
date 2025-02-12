@@ -9,6 +9,17 @@
       "_paths.js"
     ]
   },
+  "_ProgressBar.svelte_svelte_type_style_lang.js": {
+    "file": "chunks/ProgressBar.svelte_svelte_type_style_lang.js",
+    "name": "ProgressBar.svelte_svelte_type_style_lang",
+    "imports": [
+      "_index2.js",
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/ProgressBar.Cirlo5Z8.css"
+    ]
+  },
   "_client.js": {
     "file": "chunks/client.js",
     "name": "client",
@@ -108,10 +119,11 @@
     "imports": [
       "_ssr.js",
       "_paths.js",
-      "_index2.js"
+      "_index2.js",
+      "_ProgressBar.svelte_svelte_type_style_lang.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.DAxVdHqE.css"
+      "_app/immutable/assets/_layout.CyfgTcCy.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -151,45 +163,6 @@
     ],
     "css": [
       "_app/immutable/assets/_page.DA4qc2uD.css"
-    ]
-  },
-  "src/routes/diffShit/+page.svelte": {
-    "file": "entries/pages/diffShit/_page.svelte.js",
-    "name": "entries/pages/diffShit/_page.svelte",
-    "src": "src/routes/diffShit/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_client.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.C2nnK0Rf.css"
-    ]
-  },
-  "src/routes/diffShit/finished/+page.svelte": {
-    "file": "entries/pages/diffShit/finished/_page.svelte.js",
-    "name": "entries/pages/diffShit/finished/_page.svelte",
-    "src": "src/routes/diffShit/finished/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_client.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.BMRa591G.css"
-    ]
-  },
-  "src/routes/diffShit/registerPage/+page.svelte": {
-    "file": "entries/pages/diffShit/registerPage/_page.svelte.js",
-    "name": "entries/pages/diffShit/registerPage/_page.svelte",
-    "src": "src/routes/diffShit/registerPage/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_client.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.BC8rE1--.css"
     ]
   },
   "src/routes/login/+page.svelte": {
@@ -337,6 +310,70 @@
     ],
     "css": [
       "_app/immutable/assets/_page.BTyzDwSW.css"
+    ]
+  },
+  "src/routes/trials/+page.svelte": {
+    "file": "entries/pages/trials/_page.svelte.js",
+    "name": "entries/pages/trials/_page.svelte",
+    "src": "src/routes/trials/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Bc4pbv1Y.css"
+    ]
+  },
+  "src/routes/trials/diffShit/+page.svelte": {
+    "file": "entries/pages/trials/diffShit/_page.svelte.js",
+    "name": "entries/pages/trials/diffShit/_page.svelte",
+    "src": "src/routes/trials/diffShit/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_client.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.C2nnK0Rf.css"
+    ]
+  },
+  "src/routes/trials/diffShit/finished/+page.svelte": {
+    "file": "entries/pages/trials/diffShit/finished/_page.svelte.js",
+    "name": "entries/pages/trials/diffShit/finished/_page.svelte",
+    "src": "src/routes/trials/diffShit/finished/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_client.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BMRa591G.css"
+    ]
+  },
+  "src/routes/trials/diffShit/registerPage/+page.svelte": {
+    "file": "entries/pages/trials/diffShit/registerPage/_page.svelte.js",
+    "name": "entries/pages/trials/diffShit/registerPage/_page.svelte",
+    "src": "src/routes/trials/diffShit/registerPage/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_client.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BC8rE1--.css"
+    ]
+  },
+  "src/routes/trials/snakelog/+page.svelte": {
+    "file": "entries/pages/trials/snakelog/_page.svelte.js",
+    "name": "entries/pages/trials/snakelog/_page.svelte",
+    "src": "src/routes/trials/snakelog/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_ProgressBar.svelte_svelte_type_style_lang.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DVbG0sv-.css"
     ]
   }
 }
