@@ -1,6 +1,7 @@
 <script>
 	import { popup } from "@skeletonlabs/skeleton";
     import { onMount } from "svelte";
+    import {base} from '$app/paths';
     const cellSize = 40; //size of them cell bitches
   const gap = 2;
   // effective cell spacing (cell + gap)
@@ -128,11 +129,11 @@
     let unlockAudio = null
   </script>
 <audio controls autoplay loop=true disableremoteplayback class="audio">
-  <source src="/mp3/impregnation.mp3"> 
+  <source src="{base}/mp3/impregnation.mp3"> 
 </audio> 
 
 <audio controls autoplay loop=true disableremoteplayback class="audio" id="unlocky">
-  <source src="/mp3/unlock.mp3"> 
+  <source src="{base}/mp3/unlock.mp3"> 
 </audio> 
 
     <div class="container" style={overlayStyle}>
@@ -145,7 +146,7 @@
                 {#if player.x === x && player.y === y}
                 
                   <!-- Display the player PNG -->
-                  <img src="/images/aliengapejak.png" alt="Player" />
+                  <img src="{base}/images/aliengapejak.png" alt="Player" />
                 {/if}
               </div>
             {/each}

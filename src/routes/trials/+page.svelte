@@ -1,6 +1,9 @@
+<script>
+    import {base} from '$app/paths';
+</script>
 <div class="holder">
-    <button on:click={() => {window.location.href = "/trials/diffShit";}}>Attempt Registration</button>
-    <button on:click={() => {window.location.href = "/trials/snakelog";}}>Unscary Maze Game</button>
+    <button on:click={() => {window.location.href = base + "/trials/diffShit";}}>Attempt Registration</button>
+    <button on:click={() => {window.location.href = base + "/trials/snakelog";}}>Unscary Maze Game</button>
 </div>
 <!-- </style> -->
 <style>

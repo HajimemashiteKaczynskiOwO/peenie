@@ -370,7 +370,8 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_ProgressBar.svelte_svelte_type_style_lang.js"
+      "_ProgressBar.svelte_svelte_type_style_lang.js",
+      "_paths.js"
     ],
     "css": [
       "_app/immutable/assets/_page.DVbG0sv-.css"
