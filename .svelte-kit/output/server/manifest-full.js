@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/aliengapejak.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droyda.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/registermf.png","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/tits.webp","mp3/fauci.mp3","mp3/impregnation.mp3","mp3/toujours.mp3","mp3/unlock.mp3"]),
+	assets: new Set([".nojekyll","favicon.png","images/1727730631300u.png","images/aliengapejak.png","images/calm.gif","images/calmfly.png","images/calmy.png","images/droyda.png","images/droydCord.png","images/fact.png","images/gem.png","images/inans.png","images/parlor.jpg","images/peace.gif","images/pou.jpeg","images/registermf.png","images/screaming-baby-made-of-ash-v0-7nskgql0k1w91.webp","images/static-assets-upload10830305506337304706.webp","images/store/ambatron.jpg","images/store/bigtv.png","images/store/gpu.png","images/store/laptop.jpg","images/store/toaster.jpg","images/tits.webp","mp3/fauci.mp3","mp3/impregnation.mp3","mp3/toujours.mp3","mp3/unlock.mp3"]),
 	mimeTypes: {".png":"image/png",".gif":"image/gif",".jpg":"image/jpeg",".jpeg":"image/jpeg",".webp":"image/webp",".mp3":"audio/mpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.-avu84Ax.js","app":"_app/immutable/entry/app.CBCjUCna.js","imports":["_app/immutable/entry/start.-avu84Ax.js","_app/immutable/chunks/entry.BC6IWALL.js","_app/immutable/chunks/scheduler.Bs8F_AUP.js","_app/immutable/chunks/index.Cq4WKqZ9.js","_app/immutable/chunks/paths.Ca7HQ-Nf.js","_app/immutable/entry/app.CBCjUCna.js","_app/immutable/chunks/scheduler.Bs8F_AUP.js","_app/immutable/chunks/index.B5tQNggO.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.HC-yvKdN.js","app":"_app/immutable/entry/app.DeSWgetw.js","imports":["_app/immutable/entry/start.HC-yvKdN.js","_app/immutable/chunks/entry.BhPhgas4.js","_app/immutable/chunks/scheduler.Bs8F_AUP.js","_app/immutable/chunks/index.Cq4WKqZ9.js","_app/immutable/chunks/paths.y_CdwSz5.js","_app/immutable/entry/app.DeSWgetw.js","_app/immutable/chunks/scheduler.Bs8F_AUP.js","_app/immutable/chunks/index.B5tQNggO.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -32,7 +32,8 @@ return {
 			__memo(() => import('./nodes/17.js')),
 			__memo(() => import('./nodes/18.js')),
 			__memo(() => import('./nodes/19.js')),
-			__memo(() => import('./nodes/20.js'))
+			__memo(() => import('./nodes/20.js')),
+			__memo(() => import('./nodes/21.js'))
 		],
 		routes: [
 			{
@@ -141,10 +142,17 @@ return {
 				endpoint: null
 			},
 			{
+				id: "/trials/elStore",
+				pattern: /^\/trials\/elStore\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 20 },
+				endpoint: null
+			},
+			{
 				id: "/trials/snakelog",
 				pattern: /^\/trials\/snakelog\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 20 },
+				page: { layouts: [0,], errors: [1,], leaf: 21 },
 				endpoint: null
 			}
 		],

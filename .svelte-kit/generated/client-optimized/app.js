@@ -21,7 +21,8 @@ export const nodes = [
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
 	() => import('./nodes/19'),
-	() => import('./nodes/20')
+	() => import('./nodes/20'),
+	() => import('./nodes/21')
 ];
 
 export const server_loads = [];
@@ -42,7 +43,8 @@ export const dictionary = {
 		"/trials/diffShit": [17],
 		"/trials/diffShit/finished": [18],
 		"/trials/diffShit/registerPage": [19],
-		"/trials/snakelog": [20]
+		"/trials/elStore": [20],
+		"/trials/snakelog": [21]
 	};
 
 export const hooks = {

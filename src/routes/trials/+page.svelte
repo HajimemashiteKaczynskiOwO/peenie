@@ -4,6 +4,7 @@
 <div class="holder">
     <button on:click={() => {window.location.href = base + "/trials/diffShit";}}>Attempt Registration</button>
     <button on:click={() => {window.location.href = base + "/trials/snakelog";}}>Unscary Maze Game</button>
+    <button on:click={() => {window.location.href = base + "/trials/elStore";}}>Elektroniki Butiki</button>
 </div>
 <!-- </style> -->
 <style>

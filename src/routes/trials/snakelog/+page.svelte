@@ -98,6 +98,7 @@
         player.x = x;
         player.y = y;
       } //lowkey checks if the shit is valid before making yo ass move
+
       console.log("pepepepep")
       if (player.x === goal.x && player.y === goal.y) { //first win
         alert("You made it!");
@@ -128,11 +129,13 @@
 
     let unlockAudio = null
   </script>
+
+
 <audio controls autoplay loop=true disableremoteplayback class="audio">
   <source src="{base}/mp3/impregnation.mp3"> 
 </audio> 
-
-<audio controls autoplay loop=true disableremoteplayback class="audio" id="unlocky">
+      <!-- musically bitshch!!!-->
+<audio controls autoplay disableremoteplayback class="audio" id="unlocky">
   <source src="{base}/mp3/unlock.mp3"> 
 </audio> 
 
@@ -140,9 +143,9 @@
         <div class="maze">
           {#each maze as row, y}
             {#each row as cell, x}
-              <div
+              <div 
                 class="cell {cell === 1 ? 'wall' : ''} {player.x === x && player.y === y ? 'player' : ''} {goal.x === x && goal.y === y ? 'goal' : ''} {key.x === x && key.y === y ? 'key' : ''}"
-              >
+              > <!-- Display the MAZE!!!!!!!!!! -->
                 {#if player.x === x && player.y === y}
                 
                   <!-- Display the player PNG -->
@@ -207,7 +210,7 @@ display:none;
     height: 40px;
     object-fit: contain;
   }
-  .overlay {
+  .overlay { /* The flashlight effect bruh */
     position: absolute;
     width: 100%;
     height: 100%;

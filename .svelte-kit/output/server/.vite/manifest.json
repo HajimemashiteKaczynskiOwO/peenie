@@ -123,7 +123,7 @@
       "_ProgressBar.svelte_svelte_type_style_lang.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CyfgTcCy.css"
+      "_app/immutable/assets/_layout.C-7FbqMi.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -363,6 +363,18 @@
       "_app/immutable/assets/_page.BC8rE1--.css"
     ]
   },
+  "src/routes/trials/elStore/+page.svelte": {
+    "file": "entries/pages/trials/elStore/_page.svelte.js",
+    "name": "entries/pages/trials/elStore/_page.svelte",
+    "src": "src/routes/trials/elStore/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Bzjxphwb.css"
+    ]
+  },
   "src/routes/trials/snakelog/+page.svelte": {
     "file": "entries/pages/trials/snakelog/_page.svelte.js",
     "name": "entries/pages/trials/snakelog/_page.svelte",
@@ -374,7 +386,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DVbG0sv-.css"
+      "_app/immutable/assets/_page.DfjLSTZY.css"
     ]
   }
 }
