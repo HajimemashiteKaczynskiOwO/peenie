@@ -1,4 +1,5 @@
 <script>
+    
     import { onMount } from "svelte";
     
     let products = [
@@ -76,7 +77,7 @@
         });
     });
 </script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h1 class="headerName">Elektroniki Butiki</h1>
 
 <div class="sort-container">
@@ -125,8 +126,10 @@
                 </div>
             {/each}
         </div>
-        <h3 class="totalTitle">Total:</h3>
-        <p class="totalAmount">{totalAmount} kr</p>
+        <div class="total-container">
+            <h3 class="totalTitle">Total:</h3>
+            <span class="totalAmount">{totalAmount} kr</span>
+        </div>
     </div>
 
 </div>
@@ -138,6 +141,13 @@
         left:0;
         font-size: 40px;
     }
+    .total-container {
+    margin-top: auto;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    justify-content: center;
+}
     .container {
         display: flex;
         padding-left: 10px;
@@ -210,15 +220,16 @@
         text-align: center;
         font-size: 40px;
     }
-    .totalTitle{
-        margin-top: auto;
-        text-align: center;
-        font-size: 40px;
-    }
-    .totalAmount {
-        font-size: 25px;
-        text-align: center;
-    }
+    .totalTitle {
+    font-size: 40px;
+    margin: 0;
+}
+
+.totalAmount {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2c3e50;
+}
     .products {
 
         width: 80vw;
@@ -287,5 +298,66 @@
 
     .add-button:hover {
         background: #c7c7c7;
+    }
+
+
+
+
+
+    /*MOBILE FIXING SHIT*/
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            height: auto;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .products {
+            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .product-item {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .product-image {
+            height: 280px;
+        }
+
+        .add-button {
+            width: 60px;
+            height: 60px;
+            font-size: 40px;
+            line-height: 60px;
+        }
+
+        .cart {
+            width: 100%;
+            min-width: unset;
+            height: 50vh;
+            margin-top: 20px;
+        }
+
+        .cart-item-info {
+            flex-wrap: wrap;
+        }
+
+        .quantity-input {
+            width: 80px;
+            font-size: 16px;
+        }
+
+        .product-price, .totalAmount {
+            font-size: 30px;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+        }
     }
 </style>
