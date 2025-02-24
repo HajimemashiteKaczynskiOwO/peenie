@@ -77,6 +77,7 @@
         });
     });
 </script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h1 class="headerName">Elektroniki Butiki</h1>
 
@@ -106,6 +107,7 @@
     </div>
 
     <div class="cart">
+        <div class="cart-handle"></div>
         <h3 class="cartTitle">Shopping Cart</h3>
         <div class="cart-items">
             {#each cart as item}
@@ -299,6 +301,13 @@
     .add-button:hover {
         background: #c7c7c7;
     }
+    .cart-handle {
+        width: 50px;
+        height: 4px;
+        background: #ccc;
+        margin: 10px auto;
+        border-radius: 2px;
+    }
 
 
 
@@ -308,25 +317,32 @@
     @media (max-width: 768px) {
         .container {
             flex-direction: column;
-            height: auto;
-            min-height: 100vh;
             padding: 10px;
+            gap: 15px;
+            height: auto;
+        }
+        .quantity-input {
+        width: 80px;
+        height: 40px;
+        font-size: 18px;
+        }
+        
+        .remove-button {
+            width: 35px;
+            height: 35px;
+            font-size: 24px;
         }
 
         .products {
             width: 100%;
             grid-template-columns: 1fr;
-            gap: 15px;
+            height: auto;
         }
 
         .product-item {
             width: 100%;
+            margin: 0;
             height: 400px;
-            margin: 0 auto;
-        }
-
-        .product-image {
-            height: 280px;
         }
 
         .add-button {
@@ -338,26 +354,27 @@
 
         .cart {
             width: 100%;
-            min-width: unset;
             height: 50vh;
-            margin-top: 20px;
+            min-width: unset;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-top: 0;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
         }
 
-        .cart-item-info {
-            flex-wrap: wrap;
+        .cart-items {
+            padding-bottom: 80px; /* Space for total */
         }
 
-        .quantity-input {
-            width: 80px;
-            font-size: 16px;
-        }
-
-        .product-price, .totalAmount {
-            font-size: 30px;
-        }
-
-        .product-name {
-            font-size: 1.5rem;
+        .total-container {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            padding: 0 20px;
         }
     }
 </style>
